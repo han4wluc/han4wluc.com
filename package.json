@@ -1,0 +1,17 @@
+{
+  "name": "han4wluc.com",
+  "version": "0.0.1",
+  "description": "",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "npx @11ty/eleventy --config .eleventy.dev.js --serve --port 3000",
+    "build": "npx @11ty/eleventy --config .eleventy.prod.js"
+  },
+  "author": "",
+  "devDependencies": {
+    "html-minifier": "^4.0.0",
+    "markdown-it": "^14.1.0"
+  }
+}

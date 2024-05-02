@@ -1,0 +1,29 @@
+---
+title: han4wluc
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.png">
+  <title>{{ title }}</title>
+  <script>
+    window.rtglIcons = {}
+    window.files = {};
+    </script>
+  <script type="module" src="/scripts/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/rettangoli-ui@0.0.5/dist/rettangoli-ui.min.js"></script>
+  <link href="/public/theme.css" rel="stylesheet" />
+</head>
+
+<body>
+  <rtgl-view flex="1">
+    <rtgl-view flex="1" bgc="suc" d="v" p="xl">
+      {{ content }}
+    </rtgl-view>
+    
+  </rtgl-view>
+  
+</body>
+</html>
