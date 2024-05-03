@@ -14,7 +14,7 @@ title: han4wluc
     </script>
   <script src="https://cdn.jsdelivr.net/npm/rettangoli-ui@0.0.6-rc2/dist/rettangoli-ui.min.js"></script>
   <link href="/public/theme.css" rel="stylesheet" />
-  {%- for url in prefetch -%}
+  {%- for url in prerender -%}
     <link rel="prefetch" href="{{ url }}">
   {%- endfor -%}
 </head>
@@ -22,7 +22,11 @@ title: han4wluc
 <body>
   <rtgl-view flex="1" id="outer-contaier">
     <rtgl-view flex="1" bgc="suc" d="v" p="xl">
+      <rtgl-text c="on-su" s="ll"><a href="/blog">Back</a></rtgl-text>
+      <rtgl-text c="on-su" s="dm" mt="xl" mb="xl">{{ title }}</rtgl-text>
+
       {{ content }}
+      <rtgl-view h="50vh"></rtgl-view>
     </rtgl-view>
     
   </rtgl-view>

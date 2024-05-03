@@ -1,8 +1,14 @@
 ---
 layout: mylayout.html
 ---
-<rtgl-view d="v">
+
+<rtgl-text c="on-su" s="ll"><a href="/">Back</a></rtgl-text>
+
+<rtgl-view d="v" g="l" mt="xl">
     {%- for post in collections.post -%}
-      <rtgl-text c="on-su" s="tm">{{ post.data.title }}</rtgl-text>
+    <rtgl-view d="v">
+      <rtgl-text c="on-su" s="tm"><a href="{{ post.url }}">{{ post.data.title }}</a></rtgl-text>
+      <rtgl-text c="on-su" s="bm">{{ post.data.brief }}</rtgl-text>
+    </rtgl-view>
     {%- endfor -%}
 </rtgl-view>
