@@ -1,9 +1,28 @@
 ---
 layout: mylayout.html
 title: han4wluc
+prerender:
+  - /blog/
 ---
 
-<rtgl-text s="tm" c="on-su">Blog under construction</rtgl-text>
-<rtgl-text s="tm" c="on-su">Luciano Hanyon Wu</rtgl-text>
-<rtgl-text s="tm" c="on-su">X (Twitter): https://twitter.com/han4wluc</rtgl-text>
-<rtgl-text s="tm" c="on-su">LinkedIn: https://www.linkedin.com/in/han4wluc/</rtgl-text>
+<rtgl-text s="tl" c="on-su" mb="m">Luciano Hanyon Wu 吴汉勇</rtgl-text>
+<rtgl-text s="bl" c="on-su">I'm a software engineer based in Singapore. I grew up in Italy, and previously lived in China and Japan.</rtgl-text>
+<rtgl-text s="bl" c="on-su">X (Twitter): https://twitter.com/han4wluc</rtgl-text>
+<rtgl-text s="bl" c="on-su">LinkedIn: https://www.linkedin.com/in/han4wluc/</rtgl-text>
+
+<rtgl-text s="tl" c="on-su" mt="xl" mb="m">Projects</rtgl-text>
+<rtgl-text s="bl" c="on-su">routevn https://routevn.com: a platform to create and publish Visual Novels</rtgl-text>
+<rtgl-text s="bl" c="on-su">rettangoli https://github.com/yuusoft-org/rettangoli: UI library</rtgl-text>
+
+<rtgl-text s="tl" c="on-su" mt="xl" mb="m">Blog</rtgl-text>
+<rtgl-text s="bl" c="on-su"></rtgl-text>
+<rtgl-view g="m" d="v">
+    {%- for post in collections.post -%}
+    <rtgl-view d="v">
+        <rtgl-text c="on-su" s="ts">{{ post.data.title }}</rtgl-text>
+        <rtgl-text c="on-su" s="bl">{{ post.data.brief }}</rtgl-text>
+    </rtgl-view>
+    {%- endfor -%}
+</rtgl-view>
+<rtgl-text s="bl" c="on-su" mt="l">View all posts</rtgl-text>
+<rtgl-view flex="1"></rtgl-view>

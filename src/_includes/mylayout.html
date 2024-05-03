@@ -12,9 +12,11 @@ title: han4wluc
     window.rtglIcons = {}
     window.files = {};
     </script>
-  <script type="module" src="/scripts/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/rettangoli-ui@0.0.5/dist/rettangoli-ui.min.js"></script>
   <link href="/public/theme.css" rel="stylesheet" />
+  {%- for url in prerender -%}
+    <link rel="prefetch" href="{{ url }}">
+  {%- endfor -%}
 </head>
 
 <body>

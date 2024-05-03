@@ -4,5 +4,6 @@ layout: mylayout.html
 <rtgl-view d="v">
     {%- for post in collections.post -%}
       <rtgl-text c="on-su" s="tm">{{ post.data.title }}</rtgl-text>
+      <rtgl-text c="on-su" s="bm">{{ post.data.brief }}</rtgl-text>
     {%- endfor -%}
 </rtgl-view>
