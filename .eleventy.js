@@ -28,12 +28,37 @@ md.renderer.rules.heading_close = function(tokens, idx) {
 };
 
 md.renderer.rules.paragraph_open = function(tokens, idx) {
-  return `<rtgl-text c="on-su" s="bm">`;  // Custom tag for paragraph
+  return `<rtgl-text c="on-su" s="bl" mb="xl">`;  // Custom tag for paragraph
 };
 
 md.renderer.rules.paragraph_close = function(tokens, idx) {
   return '</rtgl-text>\n';  // Closing tag for custom paragraph
 };
+
+// Override the default link renderers
+md.renderer.rules.link_open = function(tokens, idx, options, env, self) {
+  const aIndex = tokens[idx].attrIndex('href');
+  const targetIndex = tokens[idx].attrIndex('target');
+
+  // Add a class if it does not exist
+  if (targetIndex < 0) {
+    tokens[idx].attrPush(['target', '_blank']); // add new attribute
+  }
+  //  else {
+  //   tokens[idx].attrs[classIndex][1] = 'my-custom-link'; // replace existing class
+  // }
+
+  // // If you want to use a different tag instead of 'a', modify tokens[idx].tag
+  // tokens[idx].tag = 'my-custom-link';
+
+  // Return the complete tag
+  return self.renderToken(tokens, idx, options);
+};
+
+// md.renderer.rules.link_close = function(tokens, idx, options, env, self) {
+//   tokens[idx].tag = 'my-custom-link'; // Ensure closing tag matches opening tag
+//   return self.renderToken(tokens, idx, options);
+// };
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("md", md);

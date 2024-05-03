@@ -1,28 +1,38 @@
 ---
 layout: mylayout.html
 title: han4wluc
-prerender:
-  - /blog/
+prefetch:
+- /blog/
 ---
 
 <rtgl-text s="tl" c="on-su" mb="m">Luciano Hanyon Wu 吴汉勇</rtgl-text>
-<rtgl-text s="bl" c="on-su">I'm a software engineer based in Singapore. I grew up in Italy, and previously lived in China and Japan.</rtgl-text>
-<rtgl-text s="bl" c="on-su">X (Twitter): https://twitter.com/han4wluc</rtgl-text>
-<rtgl-text s="bl" c="on-su">LinkedIn: https://www.linkedin.com/in/han4wluc/</rtgl-text>
+<rtgl-text s="bl" c="on-su">I'm a software engineer based in Singapore. I grew up in Italy, I have previously lived in China and Japan.</rtgl-text>
+<rtgl-text mt="l" s="bm" c="on-su"><a href="https://twitter.com/han4wluc" target="_blank">X (Twitter)</a></rtgl-text>
+<rtgl-text s="bm" c="on-su"><a href="https://www.linkedin.com/in/han4wluc" target="_blank">LinkedIn</a></rtgl-text>
 
 <rtgl-text s="tl" c="on-su" mt="xl" mb="m">Projects</rtgl-text>
-<rtgl-text s="bl" c="on-su">routevn https://routevn.com: a platform to create and publish Visual Novels</rtgl-text>
-<rtgl-text s="bl" c="on-su">rettangoli https://github.com/yuusoft-org/rettangoli: UI library</rtgl-text>
+
+<rtgl-view d="v" g="m">
+    <rtgl-view d="v">
+        <rtgl-text s="ts" c="on-su"><a href="https://routevn.com" target="_blank">routevn</a></rtgl-text>
+        <rtgl-text s="bm" c="on-su">a platform to create and publish Visual Novels</rtgl-text>
+    </rtgl-view>
+
+    <rtgl-view d="v">
+        <rtgl-text s="ts" c="on-su"><a href="https://github.com/yuusoft-org/rettangoli" target="_blank">rettangoli</a></rtgl-text>
+        <rtgl-text s="bm" c="on-su">UI library</rtgl-text>
+    </rtgl-view>
+</rtgl-view>
 
 <rtgl-text s="tl" c="on-su" mt="xl" mb="m">Blog</rtgl-text>
 <rtgl-text s="bl" c="on-su"></rtgl-text>
 <rtgl-view g="m" d="v">
     {%- for post in collections.post -%}
     <rtgl-view d="v">
-        <rtgl-text c="on-su" s="ts">{{ post.data.title }}</rtgl-text>
-        <rtgl-text c="on-su" s="bl">{{ post.data.brief }}</rtgl-text>
+        <rtgl-text c="on-su" s="ts"><a href="{{ post.url }}">{{ post.data.title }}</a></rtgl-text>
+        <rtgl-text c="on-su" s="bm">{{ post.data.brief }}</rtgl-text>
     </rtgl-view>
     {%- endfor -%}
 </rtgl-view>
-<rtgl-text s="bl" c="on-su" mt="l">View all posts</rtgl-text>
+<rtgl-text s="ts" c="on-su" mt="l"><a href="/blog">View all posts</a></rtgl-text>
 <rtgl-view flex="1"></rtgl-view>
