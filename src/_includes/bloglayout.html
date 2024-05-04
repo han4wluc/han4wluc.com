@@ -8,23 +8,29 @@ title: han4wluc
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/public/favicon.png">
   <title>{{ title }}</title>
-  <script>
-    window.rtglIcons = {}
-    window.files = {};
-    </script>
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:description" content="{{ description }}" />
+  <meta property="og:site_name" content="han4wluc's blog" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://han4wluc.com{{ page.url }}" />
+  <meta property="og:article:published_time" content="{{ page.date | isoDate }}" />
+  <meta property="og:article:author" content="han4wluc" />
   <script src="https://cdn.jsdelivr.net/npm/rettangoli-ui@0.0.6-rc2/dist/rettangoli-ui.min.js"></script>
   <link href="/public/theme.css" rel="stylesheet" />
   {%- for url in prerender -%}
     <link rel="prefetch" href="{{ url }}">
   {%- endfor -%}
+  <script>
+    window.rtglIcons = {}
+    </script>
 </head>
 
 <body>
   <rtgl-view flex="1" id="outer-contaier">
     <rtgl-view flex="1" bgc="suc" d="v" p="xl">
       <rtgl-text c="on-su" s="ll"><a href="/blog">Back</a></rtgl-text>
-      <rtgl-text c="on-su" s="dm" mt="xl" mb="xl">{{ title }}</rtgl-text>
-
+      <rtgl-text c="on-su" s="dm" mt="xl">{{ title }}</rtgl-text>
+      <rtgl-text c="on-suv" s="lm" mb="xl">{{ page.date | postDate }}</rtgl-text>
       {{ content }}
       <rtgl-view h="50vh"></rtgl-view>
     </rtgl-view>
