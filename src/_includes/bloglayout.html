@@ -13,6 +13,8 @@ title: han4wluc
   <meta property="og:site_name" content="han4wluc's blog" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://han4wluc.com{{ page.url }}" />
+  <meta property="og:article:published_time" content="{{ page.date | isoDate }}" />
+  <meta property="og:article:author" content="han4wluc" />
   <script src="https://cdn.jsdelivr.net/npm/rettangoli-ui@0.0.6-rc2/dist/rettangoli-ui.min.js"></script>
   <link href="/public/theme.css" rel="stylesheet" />
   {%- for url in prerender -%}
@@ -27,7 +29,8 @@ title: han4wluc
   <rtgl-view flex="1" id="outer-contaier">
     <rtgl-view flex="1" bgc="suc" d="v" p="xl">
       <rtgl-text c="on-su" s="ll"><a href="/blog">Back</a></rtgl-text>
-      <rtgl-text c="on-su" s="dm" mt="xl" mb="xl">{{ title }}</rtgl-text>
+      <rtgl-text c="on-su" s="dm" mt="xl">{{ title }}</rtgl-text>
+      <rtgl-text c="on-suv" s="lm" mb="xl">{{ page.date | postDate }}</rtgl-text>
       {{ content }}
       <rtgl-view h="50vh"></rtgl-view>
     </rtgl-view>

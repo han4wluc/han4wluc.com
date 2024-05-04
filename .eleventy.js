@@ -1,5 +1,7 @@
 const htmlmin = require("html-minifier");
 const MarkdownIt = require('markdown-it');
+const { DateTime } = require("luxon");
+
 const md = new MarkdownIt();
 // Override the default header renderer
 md.renderer.rules.heading_open = function(tokens, idx) {
@@ -62,6 +64,16 @@ md.renderer.rules.link_open = function(tokens, idx, options, env, self) {
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("md", md);
+
+  // Import prior to `module.exports` within `.eleventy.js`
+
+  eleventyConfig.addFilter("isoDate", (dateObj) => {
+    return dateObj.toISOString().substring(0,10);
+  });
+
+  eleventyConfig.addFilter("postDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+  });
 
   eleventyConfig.addPassthroughCopy("src/public");
   eleventyConfig.addTransform("htmlmin", function (content) {
