@@ -1,5 +1,5 @@
 ---
-tags: post
+tags: [post]
 layout: bloglayout.html
 title: Thoughts for starting a blog
 ---
