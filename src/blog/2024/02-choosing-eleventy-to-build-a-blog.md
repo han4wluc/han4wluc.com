@@ -13,7 +13,7 @@ I wanted to build a personal blog to have my personal homepage and publish blog 
 
 Elevently met those requirements, especially in being simple without adding additional complexity.
 
-### Folder and file structure
+## Folder and file structure
 
 Eleventy turns your folders and files into webpage content. Just like old plain html.
 
@@ -27,8 +27,8 @@ src
 ```
 Will be turned into:
 
-`/` Will access `index.html`
-`/blog/2024/post1` Will access `post1.md`
+* `/` Will access `index.html`
+* `/blog/2024/post1` Will access `post1.md`
 
 This is obvious, but for many years of working with MVC and SPAs, we frontend developers had to explicitly configure the routing. 
 
@@ -38,7 +38,7 @@ This setup enables me to have a homepage written with my custom html, and blog p
 
 Writing markdown files for blog posts is very attractive for me because you get the git commit history and github collaboration tools for free.
 
-### Templating and frontmatter
+## Templating and frontmatter
 
 Eleventy provides a templating functionality. For example, all my blogs have the same layout and need the same html headers etc... All I have to do is to define a `bloglayout.html`, as the layout to be reused in the blog posts.
 Front matter which is a small yaml snippet on you write on the top of the markdown or html file to define metadata for each page.
@@ -48,7 +48,7 @@ Below is the front matter for this blog post page
 tags: [post]
 layout: bloglayout.html
 title: Choosing Eleventy to build a blog
-description: In this blog post, I describe why I choose Eleventy for my blog. Eleventy is tool that provides essential features to build a blog without introducing significant complexity.
+description: In this blog post, I describe why I choose Eleventy for my blog...
 date: 2024-05-12
 ```
 
@@ -59,7 +59,7 @@ This is really nice because:
 
 The templating system and front matter removes the duplication that you would otherwise need to do with plain html
 
-### Config file for advanced functionalities
+## Config file for advanced functionalities
 
 I wanted to customize how the markdown was rendered into html
 When writing the below markdown:
@@ -104,12 +104,12 @@ md.renderer.rules.heading_close = function(tokens, idx) {
 The config file was suprisingly flexible, easy to implement and it did exactly what I needed.
 There are many other customizations that you can do with the config file, for example another one that I use is to minify the html during the build phase.
 
-### Build time and runtime
+## Build time and runtime
 
 Elevently does everything at the build time, and has zero footprint at runtime. It allows you to choose any technology you want for the runtime.
 This non intrusive feature is really important for me. In fact the page right now does not use any javascript except for the `rettangoli` dependency. This gives me full control of how the webpage is implemented.
 
-### How it compares to other frameworks
+## How it compares to other frameworks
 
 I have not done an extensive research of other tools to build personal blogs. I will briefly compare to a few that I had previously bumped or used.
 Eleventy wins over other tools mostly for its simplicity
@@ -155,6 +155,6 @@ There was one feature from Vitepress that was really attractive and I was thinki
 For me to implement a `JavaScript bundle that turns the page into an SPA` would require significant work.
 I ended up with a much simpler solution, of using `<link rel="prefetch" href="{{ url }}">`, which is supposed to prefetch the content beforhand, so when you navigate to a new page, all the content is loaded and cached already. The html tag alone seems not to be enough for it to work as the html does not seem to be cached by default. I will look into it in a later time on how to properly configure the caching to make the prefetch work as expected.
 
-### Conclusion
+## Conclusion
 
 My blog requirments are pretty simple. Eleventy is a simple tool that provides functionlities to stucture and create your blog without introducing a lot of complexity. Eleventy offers extendibility and gives you full control of the actual webpage implementation.
