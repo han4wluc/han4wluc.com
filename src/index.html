@@ -27,7 +27,7 @@ prefetch:
 <rtgl-text s="tl" c="on-su" mt="xl" mb="m">Blog</rtgl-text>
 <rtgl-text s="bl" c="on-su"></rtgl-text>
 <rtgl-view g="m" d="v">
-    {%- for post in collections.post -%}
+    {%- for post in collections.post reversed -%}
     <rtgl-view d="v">
         <rtgl-text c="on-su" s="ts"><a href="{{ post.url }}">{{ post.data.title }}</a></rtgl-text>
     </rtgl-view>

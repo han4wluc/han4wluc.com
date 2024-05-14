@@ -2,16 +2,16 @@
 tags: [post]
 layout: bloglayout.html
 title: Choosing Eleventy to build a blog
-description: In this blog post, I describe why I choose Eleventy for my blog. Eleventy is tool that provides essential features to build a blog without introducing significant complexity.
-date: 2024-05-12
+description: In this blog post, I describe why I choose Eleventy for my blog. Eleventy is tool that provides essential features to build a blog and introducing only minimal complexity.
+date: 2024-05-13
 ---
 
-In this post, I will go through why I choose Eleventy and how I use it to build this blog.
-You can find the source code of the blog here.
+In this post, I will go through why I choose [Eleventy](https://www.11ty.dev/) and how I use it to build this blog.
+You can find the [source code of the blog here](https://github.com/han4wluc/han4wluc.com).
 
-I wanted to build a personal blog to have my personal homepage and publish blog articles, the functionality and design would be very basic. I wanted a solution that was simple, easy to maintain, and give me full control on how my webpage is implemented.
+I wanted to build a personal blog to host my personal homepage and publish blog articles, the functionality and design would be very basic. I wanted a solution that was simple, easy to maintain, and give me full control on how my webpage is implemented.
 
-Elevently met those requirements, especially in being simple without adding additional complexity.
+Elevently met those requirements, especially in being simple and adding only minimal complexity.
 
 ## Folder and file structure
 
@@ -40,7 +40,7 @@ Writing markdown files for blog posts is very attractive for me because you get 
 
 ## Templating and frontmatter
 
-Eleventy provides a templating functionality. For example, all my blogs have the same layout and need the same html headers etc... All I have to do is to define a `bloglayout.html`, as the layout to be reused in the blog posts.
+Eleventy provides a templating functionality. For example, all my blog posts have the same layout and need the same html headers etc... All I have to do is to define a `bloglayout.html`, as the layout to be reused in the blog posts.
 Front matter which is a small yaml snippet on you write on the top of the markdown or html file to define metadata for each page.
 Below is the front matter for this blog post page
 
@@ -49,7 +49,7 @@ tags: [post]
 layout: bloglayout.html
 title: Choosing Eleventy to build a blog
 description: In this blog post, I describe why I choose Eleventy for my blog...
-date: 2024-05-12
+date: 2024-05-13
 ```
 
 This is really nice because:
@@ -75,7 +75,7 @@ By default would be rendered into this:
 <p>This is a paragraph</p>
 ```
 
-However, I wanted it to be transformed differently. I'm using `rettangoli` for my html and UI, so I wanted the markdown to be converted into the rettangoli web components instead of the default html tags.
+However, I wanted it to be transformed differently. I'm using [rettangoli](https://github.com/yuusoft-org/rettangoli) for my html and UI, so I wanted the markdown to be converted into the `rettangoli` web components instead of the default html tags.
 
 I wanted the markdown to be turned into:
 ```html
@@ -83,7 +83,7 @@ I wanted the markdown to be turned into:
 <rtgl-text c="on-su" s="bl" mb="xl"></rtgl-text>
 ```
 
-Luckly, Elevently enables this customization [link to url]. Eleventy uses `markdown-it` to transform the markdown into html, and it exposes it in the config file. I can pass my own `markdown-it` instance to overwrite the default behavior.
+Luckly, Elevently enables [such customization](https://www.11ty.dev/docs/languages/markdown/#markdown-options). Eleventy uses `markdown-it` to transform the markdown into html, and it exposes it in the config file. I can pass my own `markdown-it` instance to overwrite the default behavior.
 So all I had to do was to add something like this to customize the header tags transformation:
 
 ```js
@@ -128,16 +128,16 @@ When to use Ghost:
 #### Nextjs, Gatsby
 
 Why I didn't want to use it:
-* You're forced to use Reactjs
+* I didn't want to use Reactjs
 * Have to install many dependencies from `npm` that I don't have control on
 * Would need to add significant config and boilerplate to turn a Nextjs project to be used as a blog
 * They have a lot of features and flexibility but comes with additional complexity
 
 When to use:
-* I think if you need a very customized solution, and powerful features, use existing plugins, etc... 
+* I think if you need a very customized solution, and powerful features, and use use existing plugins
 * You are sure to use Reactjs as your frontend framework
 
-####  Docsaurus, Vitepress
+####  Docusaurus, Vitepress
 
 Those were the solutions closest to Eleventy in terms of static site generation
 
@@ -148,13 +148,14 @@ Why I didn't want to use it:
 When to use
 * For documentation of course
 
-There was one feature from Vitepress that was really attractive and I was thinking on how to implement it on Eleventy
+There was [one feature from Vitepress](https://vitepress.dev/guide/what-is-vitepress#performance) that was really attractive and I was thinking on how to implement it
 
 > The initial visit to any page will be served the static, pre-rendered HTML for fast loading speed and optimal SEO. The page then loads a JavaScript bundle that turns the page into a Vue SPA ("hydration")
 
 For me to implement a `JavaScript bundle that turns the page into an SPA` would require significant work.
-I ended up with a much simpler solution, of using `<link rel="prefetch" href="{{ url }}">`, which is supposed to prefetch the content beforhand, so when you navigate to a new page, all the content is loaded and cached already. The html tag alone seems not to be enough for it to work as the html does not seem to be cached by default. I will look into it in a later time on how to properly configure the caching to make the prefetch work as expected.
+I ended up with a much simpler solution, of using `<link rel="prefetch" href="{{ url }}">`, which is supposed to prefetch the content beforhand, so that the content is already loaded when you navigate to the new page. However, the html tag alone seems not to be enough for it to work as the html does not seem to be cached by default. I will look into it in a later time on how to properly configure the caching to make the prefetch work as expected.
 
 ## Conclusion
 
-My blog requirments are pretty simple. Eleventy is a simple tool that provides functionlities to stucture and create your blog without introducing a lot of complexity. Eleventy offers extendibility and gives you full control of the actual webpage implementation.
+My blog requirments are pretty basic. Eleventy is a simple tool that provides functionlities to stucture and create your blog without introducing a lot of complexity. Eleventy offers extendibility and gives you full control of the actual webpage implementation.
+I'm pretty happy with the choice so far and expect Eleventy to serve me for different use cases for for a long time.
