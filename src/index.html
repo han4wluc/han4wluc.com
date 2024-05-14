@@ -5,8 +5,10 @@ prefetch:
 - /blog/
 ---
 
-<rtgl-text s="tl" c="on-su" mb="m">Luciano Hanyon Wu 吴汉勇</rtgl-text>
-<rtgl-text s="bl" c="on-su">I'm a software engineer based in Singapore. I grew up in Italy, I have previously lived in China and Japan.</rtgl-text>
+<rtgl-text s="tl" c="on-su" mb="m">Luciano Hanyon Wu</rtgl-text>
+<rtgl-text s="tl" c="on-su" mb="m">吴汉勇</rtgl-text>
+<rtgl-text s="bl" c="on-su">I'm a software engineer based in Singapore. I grew up in Italy, I have previously lived in
+    China and Japan.</rtgl-text>
 <rtgl-text mt="l" s="bm" c="on-su"><a href="https://twitter.com/han4wluc" target="_blank">X (Twitter)</a></rtgl-text>
 <rtgl-text s="bm" c="on-su"><a href="https://www.linkedin.com/in/han4wluc" target="_blank">LinkedIn</a></rtgl-text>
 
@@ -19,7 +21,8 @@ prefetch:
     </rtgl-view>
 
     <rtgl-view d="v">
-        <rtgl-text s="ts" c="on-su"><a href="https://github.com/yuusoft-org/rettangoli" target="_blank">rettangoli</a></rtgl-text>
+        <rtgl-text s="ts" c="on-su"><a href="https://github.com/yuusoft-org/rettangoli"
+                target="_blank">rettangoli</a></rtgl-text>
         <rtgl-text s="bm" c="on-su">UI library</rtgl-text>
     </rtgl-view>
 </rtgl-view>
@@ -27,11 +30,16 @@ prefetch:
 <rtgl-text s="tl" c="on-su" mt="xl" mb="m">Blog</rtgl-text>
 <rtgl-text s="bl" c="on-su"></rtgl-text>
 <rtgl-view g="m" d="v">
-    {%- for post in collections.post reversed -%}
-    <rtgl-view d="v">
-        <rtgl-text c="on-su" s="ts"><a href="{{ post.url }}">{{ post.data.title }}</a></rtgl-text>
-    </rtgl-view>
-    {%- endfor -%}
+    <ul>
+        {%- for post in collections.post reversed -%}
+        <li>
+            <rtgl-view d="v">
+                <rtgl-text c="on-su" s="ts"><a href="{{ post.url }}">{{ post.data.title }}</a></rtgl-text>
+            </rtgl-view>
+            {%- endfor -%}
+        </li>
+    </ul>
 </rtgl-view>
-<rtgl-text s="ts" c="on-su" mt="l"><a href="/blog">View all posts</a></rtgl-text>
+<rtgl-text s="ts" c="on-su" mt="s"><a href="/blog">View all posts</a></rtgl-text>
+<rtgl-view h="50vh"></rtgl-view>
 <rtgl-view flex="1"></rtgl-view>
