@@ -3,6 +3,7 @@ title: han4wluc
 ---
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,11 +19,45 @@ title: han4wluc
   <script src="https://cdn.jsdelivr.net/npm/rettangoli-ui@0.0.6-rc2/dist/rettangoli-ui.min.js"></script>
   <link href="/public/theme.css" rel="stylesheet" />
   {%- for url in prerender -%}
-    <link rel="prefetch" href="{{ url }}">
+  <link rel="prefetch" href="{{ url }}">
   {%- endfor -%}
   <script>
     window.rtglIcons = {}
-    </script>
+  </script>
+  <style>
+    pre {
+      white-space: break-spaces;
+      color: var(--color-on-surface);
+      margin-bottom: var(--spacing-xl);
+      margin-top: 0px;
+      background-color: var(--color-surface-container-high);
+      padding: var(--spacing-l);
+      border-radius: var(--spacing-s);
+    }
+
+    ul {
+      margin-top: 0px;
+      color: var(--color-on-surface);
+      margin-bottom: var(--spacing-xl);
+    }
+
+    blockquote {
+      margin: 0px;
+      margin-bottom: var(--spacing-xl);
+      padding: var(--spacing-l);
+      background-color: var(--color-surface-container-high);
+      border-left: 4px solid var(--color-on-surface);
+      color: var(--color-on-surface);
+    }
+
+  rtgl-text > code {
+      background-color: var(--color-surface-container-high);
+      padding: 3px 6px;
+      border-radius: 6px;
+      color: var(--color-on-surface);
+      font-size: 80%;
+    }
+  </style>
 </head>
 
 <body>
@@ -34,8 +69,9 @@ title: han4wluc
       {{ content }}
       <rtgl-view h="50vh"></rtgl-view>
     </rtgl-view>
-    
+
   </rtgl-view>
-  
+
 </body>
+
 </html>

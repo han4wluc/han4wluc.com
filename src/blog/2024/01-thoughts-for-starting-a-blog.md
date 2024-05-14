@@ -1,5 +1,5 @@
 ---
-tags: post
+tags: [post]
 layout: bloglayout.html
 title: Thoughts for starting a blog
 description: Writing takes a lot of upfront cost. However, once written, you don't have to do much to maintain it, and it becomes discoverable and accessible for future readers for basically forever. You cannot predict who, when and in what context the content is read

@@ -19,8 +19,7 @@ md.renderer.rules.heading_open = function(tokens, idx) {
 
   const size = sizes[level]
 
-  return `<rtgl-text c="${color}" s="${size}">`
-
+  return `<rtgl-text c="${color}" s="${size}" mb="m">`
 };
 
 md.renderer.rules.heading_close = function(tokens, idx) {
@@ -30,7 +29,7 @@ md.renderer.rules.heading_close = function(tokens, idx) {
 };
 
 md.renderer.rules.paragraph_open = function(tokens, idx) {
-  return `<rtgl-text c="on-su" s="bl" mb="xl">`;  // Custom tag for paragraph
+  return `<rtgl-text c="on-su" s="bm" mb="xl">`;  // Custom tag for paragraph
 };
 
 md.renderer.rules.paragraph_close = function(tokens, idx) {
