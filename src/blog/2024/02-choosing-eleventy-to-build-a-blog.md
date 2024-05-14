@@ -38,11 +38,11 @@ This setup enables me to have a homepage written with my custom html, and blog p
 
 Writing markdown files for blog posts is very attractive for me because you get the git commit history and github collaboration tools for free.
 
-## Templating and frontmatter
+## Templating and Front Matter
 
 Eleventy provides a templating functionality. For example, all my blog posts have the same layout and need the same html headers etc... All I have to do is to define a `bloglayout.html`, as the layout to be reused in the blog posts.
-Front matter which is a small yaml snippet on you write on the top of the markdown or html file to define metadata for each page.
-Below is the front matter for this blog post page
+Front Matter which is a small yaml snippet on you write on the top of the markdown or html file to define metadata for each page.
+Below is the Front Matter for this blog post page
 
 ```yaml
 tags: [post]
@@ -57,7 +57,7 @@ This is really nice because:
 * The metadata lives in the same file as the content.
 * The templating integrates well with the metadata, you can have for loops etc...
 
-The templating system and front matter removes the duplication that you would otherwise need to do with plain html
+The templating system and Front Matter removes the duplication that you would otherwise need to do with plain html
 
 ## Config file for advanced functionalities
 
@@ -84,7 +84,7 @@ I wanted the markdown to be turned into:
 ```
 
 Luckly, Elevently enables [such customization](https://www.11ty.dev/docs/languages/markdown/#markdown-options). Eleventy uses `markdown-it` to transform the markdown into html, and it exposes it in the config file. I can pass my own `markdown-it` instance to overwrite the default behavior.
-So all I had to do was to add something like this to customize the header tags transformation:
+So all I had to do was to add something like the below to customize the header tags transformation:
 
 ```js
 const md = new MarkdownIt();
@@ -106,7 +106,7 @@ There are many other customizations that you can do with the config file, for ex
 
 ## Build time and runtime
 
-Elevently does everything at the build time, and has zero footprint at runtime. It allows you to choose any technology you want for the runtime.
+Elevently does everything at the build time, and has zero footprint at runtime. This allows you to choose any technology you want for the runtime.
 This non intrusive feature is really important for me. In fact the page right now does not use any javascript except for the `rettangoli` dependency. This gives me full control of how the webpage is implemented.
 
 ## How it compares to other frameworks
@@ -119,7 +119,7 @@ Eleventy wins over other tools mostly for its simplicity
 Why I didn't want to use it:
 * I didn't want to use a cloud version
 * Using the self-hosted version would mean I would need to maintain a database and server
-* I preferred the git based storage rathen that a database storage
+* I preferred the git based storage rather that a database storage
 
 When to use Ghost:
 * For people who are not technical and don't want to deal with markdown and git, the Ghost UI is user friendly
