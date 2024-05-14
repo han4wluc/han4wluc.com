@@ -19,6 +19,13 @@
   {%- for url in prefetch -%}
     <link rel="prefetch" href="{{ url }}">
   {%- endfor -%}
+  <style>
+    ul {
+      margin-top: 0px;
+      color: var(--color-on-surface);
+      margin-bottom: var(--spacing-xl);
+    }
+  </style>
 </head>
 
 <body>
@@ -26,8 +33,6 @@
     <rtgl-view flex="1" bgc="suc" d="v" p="xl">
       {{ content }}
     </rtgl-view>
-    
   </rtgl-view>
-  
 </body>
 </html>
