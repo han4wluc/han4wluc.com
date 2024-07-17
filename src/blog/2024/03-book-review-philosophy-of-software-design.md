@@ -1,5 +1,75 @@
 
 I came about this book from Antirez Tweet
+This is not to be taken lightly as Redis codebase is considered one of the most beautiful codebases out there.
+
+<!-- one line summary of the book -->
+The book takes an abstract topic of software design and analyzes it, breaking it down into smaller topics that can be studied and discussed invididually. It shares several findings on what makes better software. The topic is general to software in general and not really specifit to a programming langauge or technology.
+
+I recommend this book to software engineers who care about the quality of the code and strive to write better code.
+There was a period in the beginning & mid of my career, that I knew that the code that I was writing was not the best. but it did the job and I needed to write more code. I was reading some books and many blog articles back then, but they mostly were recipes on how to use a specific technology as the soultion, or sharing experience of successsful experiences.
+
+For this blog post, I will select few topics that I found most interesting, and give my commentanry and share some of my experiences in order to augment it. 
+
+First, let me tell the experience which I think all of us software develoeprs and been throught.
+We start a brand new project. Since is a new project, we set it up with the latest technology and version of the framework. We are all happy, and able to product a first working version relatively quickly. You write a lot of code, and you feel you know the entire codebase since everything was recently written by you. You feel productive and building features fast.
+After a while, bugs starts to appear, and there are new requirements that need you to make technical tradeoffs. Once straaighforward requirements, now need to handle many edge cases and additional features. Those bugs and tradeoffs slow things down.
+Time goes on, and at some point you feel things have gotten very slow, you don't undertand some parts of the codebase,  and you feel the urge to rewrite some parts of the code because you think there is a better way to write it. A major refactor or rewrite is a major investment, and its payoff is not guaranteed. Everything is multiplied in complexity if there are multiple developers working on the project.
+I think we have all gone through some version or other of this lifecycle. And we may say that as time goes on and the codebase growns, the codebase is becoming more complex.
+Complex is the keyword that this book tackes. But how would you define complexity? What causes complexity?
+I know that complexity is the issue, but I would not be able to expain exactly what is complexity, and what makes a system complex.
+Complexity is at the central topic in this book, and it is cleary broken down for us to study it and understand it better. Once we better understand complexity and what causes complexity, we can take more informed decisions on how to evolve our codebase to add more functionality while limiting the addition of complexity.
+
+
+
+> "Complexity is anything related to the structure of a software system that makes it hard to understand and modify the system"
+
+
+
+
+> An important and pratical attribute of complexity is that "Complexity is more apparent to readers than writers."
+
+The above is important to understand. There is a tendency for software developers to rewrite the codebase that some other developer has written. I have been guilty of this many times. It is easy to take a codebase of someone who is not in the organization anymore, and tell others that the way the code was written was bad and I can re-write it better. Experienced programmers would always be more sceptical of such statments.
+One reason you want like the code is that you don't fully understand it.
+If you re-write it yourself, you will fully understand it, even if you end up writing more ore less the same code.
+When writing the codebase, we're focusing on writing it and less of reading it.
+The risk is that you may end up with the same thing. Once you leave the organization, and the next person has to take over, he may say the same thing, this code is hard to understand, I want to rewrite it.
+This does not matter only to when codebase is handedover to another person, that person may be you, just the you in 3 months, 6 months, or 2 years. Have you ever expereicned the need to go change old codebase that you have written been thinking, this is some bad code I wrote long time ago.
+So, with this information at hand, what can we do?
+As the code writer, we need to optimize the codebase for the reader (including yuour future you), not for writing.
+Some examples:
+* using short non expressive variable names.
+* Adding comments to places where behavior is not expressd in the code.
+
+
+
+
+
+The 3 symptoms of complexity:
+* "Change amplification": "a seemingly simple change requires code modifications in many different places"
+* "Cognitive load": "how much a developer needs to know in order to complete a task"
+* "Unknown unknowns": "it is not obvious which pieces of code must be modified to complete a task, or what information a developer must have to carry out the task successfully"
+
+The 2 causes of complexity:
+* "Dependency": "a given piece of code cannot be understood and modified in isolation; the code relates in some way to other code, and the other code must be considered and/or modified if the given code is changed". Dependencies lead to change amplification and a high cognitive load.
+
+* "Obscurity": occurs when importation information is not obvious. Obscurity creates unknown unknowns, and also contributes to cognitive load.
+
+My opinions:
+
+Chapter 2 is one of my favourites. It breaks down what is exactly complexity and where it comes from.
+I knew that dealing with software main problem is complexity. However I would have a hard time to answer what is complexity.
+The author decomopresses Complexity into 3 symptoms and 2 causes:
+
+We want to minimize complexity in our systems. By having clear definitin, symptoms and cuses of complexity we can be much more cautious and aware how our code impacts complexity.
+This helps us build a red flag detector, code smell detector, an inner radar to detect complexity when we see it.
+
+
+
+
+
+
+
+
 Take a break, and analyze how to write better software rather than more software.
 Too much time attention is spent on shipping out features or completing specific tasks, or learning to use a specific tool or framekwork or APIs.
 Not enough time is spent on thinking what actually makes good software and how to write better software.
@@ -116,7 +186,10 @@ Strategical programming might take longer in the short term, but it saves more t
 My opinions
 
 basically is making a point that you should aim for long term, rather than short term. Working code is not what we aim fore, instead we want to aim for a good designed system, it pays in the long run.
-Quoting Margin Flower: "High quality code is cheaper to write"
+
+Quoting Margin Flower: "High quality code is cheaper to produce" https://martinfowler.com/articles/is-quality-worth-cost.html
+
+
 
 This is not about technical complexity per set. but to encourage the reader to adapt a strategic instead of tactical.
 
@@ -133,7 +206,6 @@ So, I don't agree that 20% is the right number, but I can agree that it is a goo
 1. refactoring sometimes is not incremental but has to meet a threshold. Even if you keep refactoring regularly, due to the design proccess you may encounter a time when a major refactor or rewrite is considered. this major refactor will not get done if your strategy is to use only 20% of your time to work on it because it will take more that 20% of the time. 
 
 
-
 Subsequent Chapters go on describing techniques that tend to produce lower complexity code.
 
 
@@ -142,11 +214,15 @@ Subsequent Chapters go on describing techniques that tend to produce lower compl
 What chapter is about
 
 It is very important to distinguish interface from implementation.
-When working on a task that involves different modules, is impossible to understand the implementation of all modules. That would be too big of a cognitive loaad.
+When working on a task that involves different modules, is impossible to understand the implementation of all modules. That would be too big of a cognitive load.
 Instead, what we can do is to be able to understand the interface of the relevant modules would be enough.
 
 Do not attach implementation with interface. When implementation changes, the interface should not change.
 
+Modules should have a smaller interface and a larger implementation. This is they key.
+Most of the complexity lies in the implementation. The interface is usually simple. So if you are able to do that, the complexity that you have added is only the size of the interface, while the features or value that is added is the size of the implemetation. We have added a lot of features while introducing little complexity.
+
+Modules should be considered first before considering to split the codebase into a separate library or microservice. Module gets many of the benefits of spllitting to a codebase while not having the overhead of a separate library or microservice.
 
 
 ## Chapter 5 Information Hiding
@@ -154,17 +230,75 @@ The interface should hide information that the user does not need to know.
 
 Althought this is obvious in theory, it is harder to apply in practice when you are actually designing a module. It takes some attempts to come up with the right interface.
 
+By information here, the author means the information about the implemeantion that is not part of the interace. I will give a couple examples from my experience:
 
-I called an API, and I needed a content text. But what came out was a specific data strustcutere that I didn't know exactly how to decode.
+
+I called an API, and I needed a content text format. I was expecting a string, but what I got instead was a lower level structure of the string that contained much embedded information. In order to get the string, I actually had to take pieced of the information and call other APIs to get the whole content. I wish there was an API I could use to get the whole text version of the content. I had to learn about how the system worked, how it handled updates etc... its data structure to correctly use this APIs.
+
+But what came out was a specific data strustcutere that I didn't know exactly how to decode.
+
+
+Another problem that I encounter is that many APIs are a direct mapping of how the data is stored.
+
 
 I often see that the API is a mirror of how the data is stored in the database. However we should be considering those separatedly.
+This is also why I think APIs should not expose the createdAt and updatedAt variables.
+
+createdAt is a column for autogerenearted column.
+For example if we add 2 users that actulaly registered 2 years ago, but we never had them in the database. Then the createdAt will be now. Instead it should be 2 years ago. The correct thing is to have a separeate column for registrationDate and use that. 
+
+I was once told, why don't we expose all the database columns in the API? because it seemed that everytime we wanted to expose a data, we would need to create a PR to update the interface and expose the new column.
+I didn't want to expose all the columns because once exposed you have to basically maintain it forever.
+
+column or variable names
+sometimes the naming might not match, we may use one thing for customer facing, and one thing internally.
+
+remember, implemenation is what you can change anytime.
+interface is, if you want to change it you'll need to tell the user of the interface about it, or introduce a breaking change. unless the interface is used in the same codebase, then refactor becomes easier you can just change it all at once.
 
 ## Chapter 6: General Purpose Modules are better
 
 This was a very interesting finding. I have experienced, but did not pay that much attention to it.
 But this is also a good news. But this is a powerful concept, closely related to modules should be deep
 
+This is actually a powerful finding.
 
+Let me give an example.
+
+Early in my carrer we were building a social application. Where there were aritcle, articles couldhave comments. comments could have comment replies. We also had article collections, and article collections could have comments.
+
+In the beginning there were only articles and comments. The database was designed like this:
+
+Article
+
+ArticleComment
+
+it was all good. Then it was require that you could reply to comments. so we satisfied that
+
+Article
+ArticleComment
+ArticleCommentComment
+
+Then there was a cocept of collections, and those also needed to have comments, and since we wanted to keep the experience consistent with articles, we also needed comment of comments.
+
+Article
+ArticleComment
+ArticleCommentComment
+CollectionComment
+CollectionCommentComment
+
+You can see clearly now how this is a problem. If we wanted to make somethng else commentable, we would need to create 2 more tables, and re-implement all of them.
+This is specialized in the sense that comments are specific to artice or collections, maybe we even had some specialized concpet such as notifications.
+
+a better way to structure this would have been:
+
+Comment
+- referenceId
+- referenceType: 'article' | 'collection' | 'comment'
+- thread (always the top most element), so you can fetch all commments in one query
+
+this is more scalable, less duplicate logic.
+if we wanted to add a functionality whether a comment should send a notification, we could do that and enable/disable it for different reference types.
 
 ## Chapter 7: Different Layer different abstraction
 
@@ -202,6 +336,8 @@ Software design, this would take a whole blog post. But we will leave it simple 
 You build an app for the first time. The outcome is that it will work, and in the process you learned many things, but for sake of time you had to make tradeoffs and ship it things out.
 Now, you scratch everything up, and have to build it again.
 The second time you build it, you will already have the experience, and can fully implement the learnidgs that you had gained the first time.
+But that took too much time, you had to build the whole thing and re-do it again. Instead of building the whole thing, you should try design it entirely. and then redesign it.  this becomes a more cost perimissive method.
+
 
 ## Chapter 12: Writing comments
 
@@ -282,6 +418,7 @@ Agile development:
 
 On my first onsite job, we used scrum. It visualized the progress of tasks and enforced people to raise the blockers that are encountered.
 I've been using daily morning standups for most part of the rest of the career, often without an actual scrum board.
+
 My job in 2018, we didn't use a formal scrum, we just had task lists. Well was a small team of only 3 devs. A year later, I would think we lacked structure and a more structured scrum would have been beneficial.
 Later in 2023, I was asked to implement scrum throughly with all documentation, story points, weekly grooming, sprint plannig, measure the velocity of the team, etc...
 My thoughts now is that I never want to do agile and scrum ever again.
@@ -308,8 +445,6 @@ I want to finish this blog post soon
 I rarely work on performance. Will skip
 
 ## Chapter 21: Design What Matters
-
-
 
 Next
 
