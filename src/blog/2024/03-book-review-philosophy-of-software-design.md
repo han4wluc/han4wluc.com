@@ -453,7 +453,16 @@ I need to take those learnings and put them and try them out in real life, in pr
 These are definitively more tools and approaches, and when workinig on some software problems, I will be thinking about using one of those tools. Applying those tools in real life will give more experience on which ones work and which ones work less well. 
 
 
+## Key take aways
 
+Deep modules
+Shallow interface with deep functionality
+Comment what is not obvious from code
+Tradeoff between keeping things together or apart
+
+Complexity
+* Reduce cognitive load
+* Reduce the number of places that need to change code
 
 
 
