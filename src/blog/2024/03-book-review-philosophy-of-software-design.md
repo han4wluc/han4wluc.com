@@ -11,15 +11,15 @@ For this article, I will select few topics that I find most interesting, and giv
 Let's first start with a little story that I think all software developers are familiar with:
 
 We start a brand new project. Since is a new project, we set it up with the latest technology and version of the libraries. We are all happy, and able to product a first working version relatively quickly. We write a lot of code, and we feel we know the entire codebase since everything was recently written by us. We feel productive and building features fast.
-After a while, bugs starts to appear, and there are new requirements that we did not originally expect and need to start make technical tradeoffs. Once straighforward requirements, now need to handle many edge cases and additional features. Those bugs and tradeoffs slow things down.
-Time goes on, and at some point we feel things have gotten very slow, we don't undertand some parts of the codebase and need to re-read it multiple times. We feel the urge to rewrite some parts of the code because you think there is a better way to write it. A major refactor or rewrite is a major investment, and its payoff is not guaranteed.
+After a while, bugs starts to appear, and there are new requirements that we did not originally anticipate. We start making technical tradeoffs. Once straighforward requirements, now need to handle edge cases and change in requirements. Those bugs and tradeoffs slow things down.
+Time goes on, and at some point we feel things have gotten slower to release, we don't undertand some parts of the codebase and need to re-read it multiple times. We feel the urge to rewrite some parts of the code because you think there is a better way to write it. A major refactor or rewrite is a major investment, and its payoff is not guaranteed.
 This whole proccess is accellearated or multiplied in complexity if there are multiple developers working on the project.
 We say that the codebase has become complex.
 
 So, in around 10 years of my career, I have experienced this lifecycle in basically every coding project I've worked with.
 It is a bit frustrating that software project needs to end up like this. But with enough experience we can do things to handle it.
 * First is to understand about the design proccess. Which I will go more in detail in another article. (is the other book that Antirez reocmmended)
-* Another central piece to understand what complexity is and what causes it. This is exactly what this book is about.
+* Another central piece is to better understand what complexity is and what causes it. This is exactly what this book is about.
 
 ## Chapter 1: It’s All About Complexity
 
@@ -34,27 +34,30 @@ The 3 symptoms of complexity:
 
 The 2 causes of complexity:
 * "Dependency": "a given piece of code cannot be understood and modified in isolation; the code relates in some way to other code, and the other code must be considered and/or modified if the given code is changed". Dependencies lead to change amplification and a high cognitive load.
-* "Obscurity": occurs when importation information is not obvious. Obscurity creates unknown unknowns, and also contributes to cognitive load.
+* "Obscurity": occurs when important information is not obvious. Obscurity creates unknown unknowns, and also contributes to cognitive load.
 
 My opinions:
 The relieving thing that there are only 3 symptosm and 2 causes, which are quite little and by getting good at identifyin these, we can become better software engineers.
 
 > Change amplification
 A bit extreme example. But from my expeirence how most of the web applications are built nowadays.
-I've seen products where in order to add collect 1 more field from a user would require this: update frontend UI, update frontend code to call backend API, update API interface and spec, update backend code in DTO, controller, service, DAO, run migration to update database column, event store schema, update ETL data and business intelligence, update internal dashboard. 
-A different system is one where you call all this in one configuration place. You just need add it to this configuration and it does all the work.
+Let's say I want to : update frontend UI, update frontend code to call backend API, update API interface and spec, update backend code in DTO, controller, service, DAO, run migration to update database column, update event store schema and code, update data pipeline for business intelligence and finally update internal dashboard to show the new field.
+A different system is one where you have one configuration place, and all different parts of the system are able to catch this change and automatically reflect the changes. You just need to update this configuration and it does all the work.
 If adding fields is expected in this domain, I think definitively you should be designing for the second case.
 
 > Cognitive load
-We can think this as the RAM of our brain, it is fast memory but limited in capacity. If we want to add more to it, we need to remove sold old memory from it. Keep this in mind for later when we talk about interfaces.
+We can think this as the RAM of our brain, it is fast memory but limited in capacity. If we want to add more to it, we need to remove some old memory from it. Keep this in mind for later when we talk about interfaces.
 
-> Unkdown unknowns
-We all have been thorugh some experiences. We were working on a task but could not figure it out and when we ask the senior engineer he says it is becaseu of bala bla bal and our reactions is "how could I ever have known that?". Well, the issue is we needed to ask someone to figure it out. Preventing the unknown unknown is so that any engineer can figure it out by themself. Documention comes helpful here.
+> Unknown unknowns
+We all have been thorugh some experiences. We were working on a task but could not figure it out and when we ask the senior engineer he says it is because of bala bla bal and our reactions is "how could I ever have known that?". Well, the issue is we needed to ask someone to figure it out. Preventing the unknown unknown is so that any engineer can figure it out by themself. Documention comes helpful here.
 
-So, when writing code desiging software, we can ask ourself.
-Is this code adding dependency or obscurity? Is it worth it?
-It this contributing to change amplificiation, cognitive load or unkonw unknowns?
+> Dependency
+Dependency is everywhere, however it is not for free. So, when we add a dependency we need to consider if the benefits outweight the cost, and if there are simpler alternatives to adding a dependency.
 
+> Obscurity
+We want to codebase to be able to explain itself, and if necessary have documentation to do so.
+
+Once we have understood those concepts, we can try apply them. When designing software and writing code, we can be more concious of these 3 symptoms and 2 causes, and strive to make decisions that minimize them
 
 ## Interface, information hiding, deep modules
 
@@ -62,17 +65,17 @@ Let's summarize the what is an interface and what is an implementation.
 
 For a Web API, the API doc is the interface (for example Open API doc). The implemetnation is the the backend code. API documentation is part of the interface.
 For a function. the Function parameters/arguments and return type is the interface. The imlementation is the content of the functions.
-Function Comments are part of the interface.
+Function comments are part of the interface.
 
 > It’s more important for a module to have a simple interface than a simple implementation
 
 To understand this quote, we need to understand the relationship of interface and implemeantion to cognitive load.
 
-When we use a function, we need to 'load' its interface to our cognitive load. But we don't need to 'load' the implementation.
+When we use a function, we need to 'load' its interface into our cognitive load. But we don't need to 'load' the implementation.
 The implementation of the interface can be very complicated. But as long as the interface is simple, we can get all the benefits of the implementation by paying for the simplicity of the interface.
 
-The user of the function should not be needing to know about the implemeantion. This is the whole point of the interaface. Unless, of course his/her task so to update the implementation itself.
-If the user of the function needs to know or read about the details of the implementation, you might be having information leakage.
+The user of the function should not be needing to know about the implementation. This is the whole point of the interaface. Unless, of course his/her task so to update the implementation itself.
+If the user of the function needs to know or read about the details of the implementation, you might be having 'information leakage', and you will have a hard time because when you implementation changes, the interface will need to change as well.
 
 > Modules should be deep
 > General-purpose modules are deeper
@@ -108,6 +111,7 @@ This quote says it very well.
 
 I've experienced both extremes of writing comments.
 When writing excessive comments, we would write comments on every line of code. This makes it very verbose and giving us doubts on the usefullness of the comments.
+
 When we stop writing comments and don't write any comments, then there will be times when there will be surprises to the reader or the reader will have no option but go ask the code author (who hopefully is still there).
 
 ## Chapter 17: Consistency
