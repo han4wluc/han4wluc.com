@@ -49,6 +49,8 @@ The 2 causes of complexity:
 
 The relieving thing is that by focusing only on those 2 causes and 3 symptoms we can do a lot to reduce complexity. The author refers to these concepts througout the whole book.
 
+Once we have understood those concepts, we can try apply them in real life. When designing software and writing code, we can be more concious of these 3 symptoms and 2 causes, and strive to make decisions that minimize them
+
 ### Change amplification
 
 > A seemingly simple change requires code modifications in many different places
@@ -109,23 +111,24 @@ Code should be obvious
 
 We want to codebase to be able to explain itself, and if necessary have documentation to do so.
 
-Once we have understood those concepts, we can try apply them. When designing software and writing code, we can be more concious of these 3 symptoms and 2 causes, and strive to make decisions that minimize them
-
 One thing I have is to make things explicit.
+
+Making code more obvious is talked in the book. There is no silver bullet, but the author does share some suggestions.
+
 
 ### Interface, information hiding, deep modules
 
 Let's summarize the what is an interface and what is an implementation.
 
 * For a Web API
-  * the API doc is the interface (for example Open API doc).
-  * The implemetnation is the the backend code. API documentation is part of the interface.
+  * The interface is the API specification and documentation (an Open API doc for example).
+  * The implemetnation is the the backend code
 * For a function
-  * the Function parameters/arguments and return type is the interface.
-  * The imlementation is the content of the functions.
+  * The interface is the function parameter types and return type
+  * The implementation is the content of the functions, the code that is run when the function is invoked
 * For a class
-
-Function comments are part of the interface.
+  * The interface is all the public methods and properties
+  * The implementation is the actual content of the methods
 
 > It’s more important for a module to have a simple interface than a simple implementation
 
@@ -149,30 +152,30 @@ First implication of this is that you first need to understand you user or how t
 Simple case, use case A is used 90% of time, and use case B is used 10% of time. Then we can design this function so that with default parameters, it will satisfy use case A. With an additional optional parameter passed, it will satisfy use case B.
 
 
-### Commenting the code
+### Code Comments
 > Comments should describe things that are not obvious from the code
 
-I've experienced both extremes of writing comments.
+Below are two extremes of writing comments
 
-When writing excessive comments, comments can be written on every line of code. This makes it very verbose and giving us doubts on the usefullness of the comments. More comments means more work for the writer and also more content to maintain.
+* When writing excessive comments, comments can be written on every line of code. This makes it very verbose and giving us doubts on the usefullness of the comments. More comments means more work for the writer and also more content to maintain.
 
-Another school of thought is that code itself should be self explanatory and that we should not be writing comments explaining the code. The issue is that the reader will need to spend a lot of time to go through the code and that there will always be information that is just lost in the code.
+* No comments at all. The code itself should be self explanatory and that we should not be writing comments explaining the code. The issue is that the reader will need to spend a lot of time to go through the code and that there will always be information that is just lost in the code.
 
-This quote provides such a beautiful and right statement on when code should be written. It solves the shortcoming of both extremes.
+This quote provides such a beautiful statement for when and for what purpose comments should be written. It solves the shortcoming of both extremes.
 
-### Chapter 17: Consistency
+### Consistency
 
 When reading a codebase or documentation, we expect it to be consistent.
 
 However when writing code or documentation it is a challenge to make everything consistent, it takes a lot of discipline.
 
-The best way to promote consistency is to keep things consistent in the first place. A consistent codebase promotes consistency, once inconsistency is introduced, things will just become more inconsistent.
+The best way to promote consistency is to keep things consistent in the first place. A consistent codebase promotes consistency, once inconsistency is introduced, things will naturally become more inconsistent. Similar to broken window effect.
 
-Another way to promote consistency is to document it. For example a documentation for terminology, or style guidelines.
+Documentation can help with consistency. For example documentation of the terminology or coding style guidelines.
 
-When working on someone else's codebase, the best thing to do is to follow the existing conventions even if you don't agree with them. If you don't, the code will start to become more inconsistent. If you really want to make a change to the codebase, you should change all the places so that it does not introduce inconsistency.
+When working on someone else's codebase, the best thing to do is to follow the existing way of doing things even if you don't agree with them or have a better way. If you don't do so, the code will start to become more inconsistent. If you really want to improve the way things are done in this codebase, you should change all the places at once so that it does not introduce inconsistency.
 
-### Writing vs reading the code
+### Writing vs reading code
 
 > Complexity is more apparent to readers than writers
 
@@ -186,7 +189,7 @@ The reader does not only mean other people. After you've written the code, you y
 
 The code is written only once and that is it. However, it will be read over and over again for the entire lifetime of the codebase.
 
-It will take an higher initial investment to make the code easier to read, but it will pay out dividends throughout the lifetime of the codebase. If this code is for a hackathon or proof of concept, it does not matter so much, but for a long term codebase it becomes essential. 
+It will take a higher initial investment to make the code easier to read, but it will pay out dividends throughout the lifetime of the codebase. If this code is for a hackathon or proof of concept, it does not matter so much, but for a long term codebase it becomes essential. 
 
 # Conclusion
 
