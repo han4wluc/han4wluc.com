@@ -1,12 +1,23 @@
+---
+tags: [post]
+layout: bloglayout.html
+title: 'Book Review: A Philosophy of Software Design'
+description: ok
+date: 2024-08-26
+---
 
-I came about this book from a (Tweet from Antirez's)[https://twitter.com/antirez/status/1727706640147738998]
-This is not to be taken lightly as Redis was often regarded as some of the best code out there
+<img src="/public/2024/03/a-philosophy-of-software-design-cover.jpeg"></img>
+
+I discovered this book from a [Tweet from Antirez's](https://twitter.com/antirez/status/1727706640147738998).
+This is not to be taken lightly as Redis was sometimes regarded as some of the best codebases available in public.
 
 I recommend this book to software engineers who care about the quality of the code and strive to design better software.
-I wish I had come to read this book earlier in my career when there was a period I was reading various books and blogs about writing better software. 
-The learnings of this books is not tied to any technology or framework or tech stack. It gives practical fundamentals about software and complexity. So, unlike the title of being a 'Philosophy', I find this book to be quite practical instead.
 
-For this article, I will select few topics that I find most interesting, and give my commentanry and share some of my experiences in regards.
+I wish I had come to read this book earlier in my career as I find it more practical and influential than any of the blogs and other books I had read back then.
+
+The learnings of this books is not tied to any technology or framework or tech stack. It gives practical fundamentals about software design and understanding of complexity.
+
+For this article, I will select few topics that I found most interesting, and give my commentanry and share some of my experiences in regards.
 
 Let's first start with a little story that I think all software developers are familiar with:
 
