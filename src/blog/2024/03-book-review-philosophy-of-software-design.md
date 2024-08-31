@@ -8,8 +8,8 @@ date: 2024-08-28
 
 <img src="/public/2024/03/a-philosophy-of-software-design-cover.jpeg"></img>
 
-I discovered this book from a [Tweet from Antirez's](https://twitter.com/antirez/status/1727706640147738998).
-This is not to be taken lightly as Redis was sometimes regarded as some of the best codebases available in public.
+I discovered this book from a [Tweet from Antirez's (author of Redis)](https://twitter.com/antirez/status/1727706640147738998).
+This is not to be taken lightly as Redis is regarded as some of the best codebases available out there.
 
 I recommend this book to software engineers who care about the quality of the code and strive to design better software.
 
@@ -17,12 +17,12 @@ I wish I had come to read this book earlier in my career as I find it more pract
 
 The learnings of this books is not tied to any technology or framework or tech stack. It gives practical fundamentals about software design and understanding of complexity.
 
-For this article, I will select few topics that I found most interesting, and share some of my experiences in regards. The content unless quoted is my opinion, not the author's writing. Please definitively read the original book as well.
+For this article, I will select few concepts that I found most interesting, and share some of my experiences and thoughts. The content unless quoted is my opinion, not the author's writing.
 
 Let's first start with a little story that I think all software developers are familiar with:
 
-* We start a brand new project. We set it up with the latest technology and version of the libraries. We are all happy, know the entire codebase, get something working very quickly.
-* After a while, bugs starts to appear, and there are new requirements that we did not originally anticipate. Once straighforward requirements, now we need to handle edge cases and thinkg about technical tradeoff we need to make.
+* We start a brand new project and set it up with the latest technology and version of the libraries. We are all happy, know the entire codebase, we can get something working very quickly.
+* After a while, bugs starts to appear, and there are new requirements that we did not originally anticipate. We now need to handle edge cases and thinkg about technical tradeoffs we need to make.
 * Time goes on, and at some point we feel things have gotten slower to release, we don't undertand some parts of the codebase and need to re-read it multiple times. We feel the urge to refactor or rewrite some parts of the code however a major refactor or rewrite is a major investment and its payoff is not guaranteed.
 * This whole proccess is accellerated if there are multiple developers working on the project.
 * We say that the codebase has become complex.
@@ -47,29 +47,15 @@ The 2 causes of complexity:
 * Dependency
 * Obscurity
 
-The relieving thing is that by focusing only on those 2 causes and 3 symptoms we can do a lot to reduce complexity. The author refers to these concepts througout the whole book.
+The relieving thing is that by focusing only on those 2 causes and understand the 3 symptoms we can do a lot to reduce complexity. Once we have understood those concepts, we can better discuss how each software practice impacts these concepts.
 
-Once we have understood those concepts, we can try apply them in real life. When designing software and writing code, we can be more concious of these 3 symptoms and 2 causes, and strive to make decisions that minimize them
-
-### Change amplification
+### Symptom 1: Change amplification
 
 > A seemingly simple change requires code modifications in many different places
 
-If in order to complete a task you need to change in 1 place vs changing in 5 places, the answer is obvious. However, do we take this into consideration when designing our software? How to design such a system with all the constraints we have is not obvious.
+This is a straighforward concept. If you need to make changes to more places, the task will be harder than where you only need to make changes in a fewer places.
 
-I'll share an extreme example, but I also think how most of software is built in todays' terms. Let's say I want to collect one more datapoint from users. Below are the places whre I would need to introduce the change:
-* update frontend code
-* update API interface and spec
-* update backend code in controller, service, DAO
-* run migration to update database column
-* update data pipeline for business intelligence
-* finally update internal dashboard to show the new field.
-
-However this is not the only way to do it. It is possible to build a system where you have information on where to collect in one configuration, and all you need to do is to update this configuration.
-
-If adding fields is expected in this domain, I think definitively you should be designing for the second case.
-
-### Cognitive load
+### Symptom 2: Cognitive load
 
 > how much a developer needs to know in order to complete a task
 
@@ -77,43 +63,43 @@ I like to think cognitive load as the RAM of our brain, it is fast memory but li
 
 For me personally, I have a tendency to load a lot of information into my cognitive load to work on the hard problems. Sometimes it becomes too much, and I have just shut down all the context, and then restart over again.
 
-Another analogy in the age is LLMs is the context window. All LLMs have a limited context window, and shorter prompts usually performs better and more concise instructions.
+Another analogy in today's age of LLMs is the context window. All LLMs have a limited context window, and shorter prompts usually performs better and more concise instructions.
 
-### Unknown unknowns
+### Symptom 3: Unknown unknowns
 
 > it is not obvious which pieces of code must be modified to complete a task, or what information a developer must have to carry out the task successfully
 
-In an ideal world, a developer working on a codebase should know everything needed to complete a task. If not, the only options left are to read the whole codebase or ask the codebase author.
+In an ideal world, when a developers starts working on a task, he/she knows already what needs to be done and starts the implementation. This is a world without unknown uknowns.
 
-I think in real world, especially in office environments we too often rely on asking the codebase author. Which adds this human non scalable factor.
+In the real world, we spend a lot of time in the beginning to figure out what needs to be done, often having to read a lot of documentation or the codebase and researching. In fact, this often takes much more time than the actual implementation.
 
-We also want the codebase to be self expalining and to minize the amount of code the developer has to read to complete his task.
+This is the symptom that the author puts most emphasis on.
 
-Documentation definitively helps, but we can't just ask the developer to read the whole documentation instead of the whole codebase.
-
-Solving for the unknown unknown and making the codebase self explanatory is a central piece of making good softare. It is not an engineering limitaiton, it is an art and communication that has to be learned.
-
-### Dependency
+### Cause 1: Dependency
 
 > a given piece of code cannot be understood and modified in isolation; the code relates in some way to other code, and the other code must be considered and/or modified if the given code is changed. Dependencies lead to change amplification and a high cognitive load
 
-Dependency is everywhere, however it is not for free. So, when we add a dependency we need to consider if the benefits outweight the cost, and if there are simpler alternatives to adding a dependency.
+Adding dependencies is necessary in software. However dependencies come with additional complexity.
+Below is the logic to be used for adding dependencies:
 
-Having too many dependencies meaning that a change in a dependency will affect the dependant as well.
-Having a lot of dependencies means you need to think about those dependencies.
+* If there is no need to add dependency, don't introduce a dependency
+* Check if the benefit of adding depdency outweights the additional complexity that comes with the dependency
+* If the benefit don't outweight the costs, don't add the dependency.
+* Design the interface to be small so to minimize the complexity from the dependency
 
-### Obscurity
+### Cause 2: Obscurity
 
 > occurs when important information is not obvious. Obscurity creates unknown unknowns, and also contributes to cognitive load
 
+Opposite of obscurity is obvious code.
 
-Code should be obvious
+Junior developers are focused only on creating working code. senior developers already know how to make working code and are more concerned on how to make the code mantainable.
 
-We want to codebase to be able to explain itself, and if necessary have documentation to do so.
+making the code obvious is the best way to make the code maintainable.
 
-One thing I have is to make things explicit.
+It directly relates to the unknown uknown symptom.
 
-Making code more obvious is talked in the book. There is no silver bullet, but the author does share some suggestions.
+There is no silver bullet, but the author does share some suggestions.
 
 
 ### Interface, information hiding, deep modules
@@ -174,6 +160,8 @@ The best way to promote consistency is to keep things consistent in the first pl
 Documentation can help with consistency. For example documentation of the terminology or coding style guidelines.
 
 When working on someone else's codebase, the best thing to do is to follow the existing way of doing things even if you don't agree with them or have a better way. If you don't do so, the code will start to become more inconsistent. If you really want to improve the way things are done in this codebase, you should change all the places at once so that it does not introduce inconsistency.
+
+Consistency is a pre-requisite for implementing any convention over configuration.
 
 ### Writing vs reading code
 
