@@ -3,34 +3,31 @@ tags: [post]
 layout: bloglayout.html
 title: 'Book Review: A Philosophy of Software Design'
 description: ok
-date: 2024-08-28
+date: 2024-09-02
 ---
 
 <img src="/public/2024/03/a-philosophy-of-software-design-cover.jpeg"></img>
 
-I discovered this book from a [Tweet from Antirez's (author of Redis)](https://twitter.com/antirez/status/1727706640147738998).
-This is not to be taken lightly as Redis is regarded as some of the best codebases available out there.
+I discovered this book from a [Tweet from Antirez](https://twitter.com/antirez/status/1727706640147738998). Redis is regarded as some of the best codebases available out there, so his opinion was not to be taken lightly.
 
-I recommend this book to software engineers who care about the quality of the code and strive to design better software.
+I wish I had come to read this book earlier in my career as I find it more practical than then articles and other books I had read back then. I recommend this book for people who care and strive to improve the quality of their code.
 
-I wish I had come to read this book earlier in my career as I find it more practical and influential than any of the blogs and other books I had read back then.
-
-The learnings of this books is not tied to any technology or framework or tech stack. It gives practical fundamentals about software design and understanding of complexity.
+The learnings of this books is not tied to any technology or framework or tech stack. It teaches about fundamentals of complexity in regards to software.
 
 For this article, I will select few concepts that I found most interesting, and share some of my experiences and thoughts. The content unless quoted is my opinion, not the author's writing.
 
 Let's first start with a little story that I think all software developers are familiar with:
 
 * We start a brand new project and set it up with the latest technology and version of the libraries. We are all happy, know the entire codebase, we can get something working very quickly.
-* After a while, bugs starts to appear, and there are new requirements that we did not originally anticipate. We now need to handle edge cases and thinkg about technical tradeoffs we need to make.
-* Time goes on, and at some point we feel things have gotten slower to release, we don't undertand some parts of the codebase and need to re-read it multiple times. We feel the urge to refactor or rewrite some parts of the code however a major refactor or rewrite is a major investment and its payoff is not guaranteed.
+* After a while, bugs starts to appear, and there are new requirements that we did not originally anticipate. We now need to handle edge cases and think about technical tradeoffs we need to make.
+* Time goes on, and at some point we feel things have gotten slower to release, we don't undertand some parts of the codebase and need to re-read it multiple times. We feel the urge to refactor or rewrite some parts of the code but a major refactor or rewrite is a big investment and its payoff is not guaranteed.
 * This whole proccess is accellerated if there are multiple developers working on the project.
 * We say that the codebase has become complex.
 
 I have experienced this lifecycle again and again in basically all software project I've worked with.
-It is a bit frustrating that software project needs to end up like this. But with enough experience we can make more educated decisions on how to handle it.
+It is a bit frustrating that software projects needs to end up like this. But with enough experience we can make more educated decisions on how to handle it.
 * First is to gain an understanding about the design proccess. I will go more in detail in another article. (is the other book that Antirez reocmmended)
-* Another thing we can do is to better understand what complexity is and what causes it. This is exactly what this book is about.
+* Another thing we can do is to understand what complexity is and what causes it. This is exactly what this book is about.
 
 ### It’s All About Complexity (Chapter 1)
 
@@ -47,95 +44,96 @@ The 2 causes of complexity:
 * Dependency
 * Obscurity
 
-The relieving thing is that by focusing only on those 2 causes and understand the 3 symptoms we can do a lot to reduce complexity. Once we have understood those concepts, we can better discuss how each software practice impacts these concepts.
+This is actually not so many concepts. The author refers to those concepts througout the book.
 
 ### Symptom 1: Change amplification
 
 > A seemingly simple change requires code modifications in many different places
 
-This is a straighforward concept. If you need to make changes to more places, the task will be harder than where you only need to make changes in a fewer places.
+This is straighforward. If you need to make changes to more places, the task will be harder than where you only need to make changes in a fewer places.
 
 ### Symptom 2: Cognitive load
 
 > how much a developer needs to know in order to complete a task
 
-I like to think cognitive load as the RAM of our brain, it is fast memory but limited in capacity. If we want to add more to it, we need to remove some old memory from it. It cannot grow indefinitively.
+I like to think cognitive load as the RAM of our brain, it is fast memory but limited in capacity. If we want to add more to it, we need to remove some old memory. It cannot grow indefinitively.
 
-For me personally, I have a tendency to load a lot of information into my cognitive load to work on the hard problems. Sometimes it becomes too much, and I have just shut down all the context, and then restart over again.
+For me personally, I have a tendency to load a lot of information into my cognitive load to work on the hard problems. Sometimes it becomes too much, and I have just shut down all the context, and then restart over again. Tasks that require more cognitive load are more tiring to perform.
 
-Another analogy in today's age of LLMs is the context window. All LLMs have a limited context window, and shorter prompts usually performs better and more concise instructions.
+Another analogy in today's age of LLMs is the context window. All LLMs have a limited context window, and shorter prompts with concise instructions usually performs better.
 
 ### Symptom 3: Unknown unknowns
 
 > it is not obvious which pieces of code must be modified to complete a task, or what information a developer must have to carry out the task successfully
 
+This is the symptom that the author puts most emphasis on.
+
 In an ideal world, when a developers starts working on a task, he/she knows already what needs to be done and starts the implementation. This is a world without unknown uknowns.
 
 In the real world, we spend a lot of time in the beginning to figure out what needs to be done, often having to read a lot of documentation or the codebase and researching. In fact, this often takes much more time than the actual implementation.
 
-This is the symptom that the author puts most emphasis on.
 
 ### Cause 1: Dependency
 
 > a given piece of code cannot be understood and modified in isolation; the code relates in some way to other code, and the other code must be considered and/or modified if the given code is changed. Dependencies lead to change amplification and a high cognitive load
 
-Adding dependencies is necessary in software. However dependencies come with additional complexity.
-Below is the logic to be used for adding dependencies:
+Adding dependencies is necessary in software. However dependencies are not free, they come with additional complexity.
 
-* If there is no need to add dependency, don't introduce a dependency
-* Check if the benefit of adding depdency outweights the additional complexity that comes with the dependency
-* If the benefit don't outweight the costs, don't add the dependency.
-* Design the interface to be small so to minimize the complexity from the dependency
+We need to think about:
+
+* How to design interfaces so that we add least amount of complexity from the dependency.
+* What are the benefits of adding the dependency. Is the tradeoff worth it?
+
+The section below about interfaces will go in more detail on how to achieve this.
+
 
 ### Cause 2: Obscurity
 
 > occurs when important information is not obvious. Obscurity creates unknown unknowns, and also contributes to cognitive load
 
-Opposite of obscurity is obvious code.
+Opposite of obscurity is obvious code. The author advocates that code should be obvious.
 
-Junior developers are focused only on creating working code. senior developers already know how to make working code and are more concerned on how to make the code mantainable.
+Junior developers are usually focused mostly on creating working code. Senior developers already know how to make working code and are more concerned on how to make the code mantainable.
 
-making the code obvious is the best way to make the code maintainable.
-
-It directly relates to the unknown uknown symptom.
-
-There is no silver bullet, but the author does share some suggestions.
-
+There is no silver bullet on how to do this, the author does share several techniques and practices such as code comments, consistency and optimizing code for reading instead of writing.
 
 ### Interface, information hiding, deep modules
 
 Let's summarize the what is an interface and what is an implementation.
 
-* For a Web API
-  * The interface is the API specification and documentation (an Open API doc for example).
-  * The implemetnation is the the backend code
-* For a function
-  * The interface is the function parameter types and return type
-  * The implementation is the content of the functions, the code that is run when the function is invoked
-* For a class
-  * The interface is all the public methods and properties
-  * The implementation is the actual content of the methods
+**Interface**: a defined way for different components or systems to communicate and interact with each other. It specifies what operations can be performed, but not how those operations are carried out
+
+**Implementation**: the actual code and logic that fulfills the contract defined by the interface. It is the how part, where the operations specified by the interface are actually performed
 
 > It’s more important for a module to have a simple interface than a simple implementation
 
 To understand this quote, we need to understand the relationship of interface and implemeantion to cognitive load.
 
-When we use a function, we need to 'load' its interface into our cognitive load. But we don't need to 'load' the implementation.
-The implementation of the interface can be very complicated. But as long as the interface is simple, we can get all the benefits of the implementation by paying for the simplicity of the interface.
+A bigger or richer interface will increase cognitive load.
 
-The user of the function should not be needing to know about the implementation. This is the whole point of the interaface. Unless, of course his/her task so to update the implementation itself.
-If the user of the function needs to know or read about the details of the implementation, you might be have what the author calls 'information leakage', and you will have a hard time because when you implementation changes, the interface will need to change as well.
+A longer or richer implementation does not increase cognitive load.
+
+This is because when using a function/module/API we only need to know about the interface and not about the implementation.
+
+If the implementation is simplier than the interface itself, it may be possible that the dependency is not worth it.
+
 
 > Modules should be deep. General-purpose modules are deeper
 
-Modules should be deep reiterates modules to have simple interfaces and rich implementation.
-General purpose modules are better was an interesting concept for me. That is because a general purpose modules can satisfy both the needs of edge cases and common cases. The advantage is that you only need to maintain one implementation to satisfy all use cases.
+By deep modules, the author refers to modules that have small interfaces and rich implementations.
+
+General purpose modules are modules that can satisfy both the specific cases and normal cases. The good thing is that with a general purpose module, you only need to implement and maintain this one module instead of maintaining different interfaces and implementations for specialized cases.
+
+
+<!-- add example -->
+
+
 
 > Interfaces should be designed to make the most common usage as simple as possible
 
-First implication of this is that you first need to understand you user or how this interface is planned to be used.
+We need to first understand the users or how this interface will be used.
 
-Simple case, use case A is used 90% of time, and use case B is used 10% of time. Then we can design this function so that with default parameters, it will satisfy use case A. With an additional optional parameter passed, it will satisfy use case B.
+If a function has 2 use cases and use case A is used 90% of the time. We should make the default behavior to satisfy use case A and allow case B by specifying additional parameters.
 
 
 ### Code Comments
