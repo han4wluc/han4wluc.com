@@ -19,9 +19,9 @@ For this article, I will select few concepts that I found most interesting, and 
 Let's first start with a little story that I think all software developers are familiar with:
 
 * We start a brand new project and set it up with the latest technology and version of the libraries. We are all happy, know the entire codebase, we can get something working very quickly.
-* After a while, bugs starts to appear, and there are new requirements that we did not originally anticipate. We now need to handle edge cases and think about technical tradeoffs we need to make.
+* After a while, bugs starts to appear, and there are new requirements that we did not originally anticipate. We now need to handle edge cases and think about technical tradeoffs.
 * Time goes on, and at some point we feel things have gotten slower to release, we don't undertand some parts of the codebase and need to re-read it multiple times. We feel the urge to refactor or rewrite some parts of the code but a major refactor or rewrite is a big investment and its payoff is not guaranteed.
-* This whole proccess is accellerated if there are multiple developers working on the project.
+* This whole proccess is accellerated if there are multiple developers working on the codebase.
 * We say that the codebase has become complex.
 
 I have experienced this lifecycle again and again in basically all software project I've worked with.
@@ -44,7 +44,7 @@ The 2 causes of complexity:
 * Dependency
 * Obscurity
 
-This is actually not so many concepts. The author refers to those concepts througout the book.
+Those concepts itself are actually pretty straighforward. The author refers to those concepts througout the book.
 
 ### Symptom 1: Change amplification
 
@@ -72,10 +72,12 @@ In an ideal world, when a developers starts working on a task, he/she knows alre
 
 In the real world, we spend a lot of time in the beginning to figure out what needs to be done, often having to read a lot of documentation or the codebase and researching. In fact, this often takes much more time than the actual implementation.
 
+We need to think about how do we make the software so that we can as much as possible approach the ideal world scenario.
+
 
 ### Cause 1: Dependency
 
-> a given piece of code cannot be understood and modified in isolation; the code relates in some way to other code, and the other code must be considered and/or modified if the given code is changed. Dependencies lead to change amplification and a high cognitive load
+> A given piece of code cannot be understood and modified in isolation; the code relates in some way to other code, and the other code must be considered and/or modified if the given code is changed. Dependencies lead to change amplification and a high cognitive load
 
 Adding dependencies is necessary in software. However dependencies are not free, they come with additional complexity.
 
