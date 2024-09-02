@@ -120,14 +120,25 @@ If the implementation is simplier than the interface itself, it may be possible 
 
 > Modules should be deep. General-purpose modules are deeper
 
-By deep modules, the author refers to modules that have small interfaces and rich implementations.
+By deep modules, the author refers to modules that have small interface and rich implementation.
 
-General purpose modules are modules that can satisfy both the specific cases and normal cases. The good thing is that with a general purpose module, you only need to implement and maintain this one module instead of maintaining different interfaces and implementations for specialized cases.
+General purpose modules are modules that can satisfy both the specific cases and common cases, so we only need to maintain this one interface and implementation.
 
+This is a simplified exmaple:
 
-<!-- add example -->
+Instead of having 3 interface like this:
+```
+insertAtBeginnig(content)
+insertAt(position, content)
+insertAtEnd(content)
+```
 
+It can be written with only one interface:
+```
+insert(position, content)
+```
 
+This one interface can satisfy the specialized cases of inserting in the beginning or in the end as well
 
 > Interfaces should be designed to make the most common usage as simple as possible
 
@@ -141,11 +152,11 @@ If a function has 2 use cases and use case A is used 90% of the time. We should 
 
 Below are two extremes of writing comments
 
-* When writing excessive comments, comments can be written on every line of code. This makes it very verbose and giving us doubts on the usefullness of the comments. More comments means more work for the writer and also more content to maintain.
+* When writing excessive comments, comments can be written on every line of code. This makes it very verbose and giving us doubts on the usefullness of the comments. More comments means more content to maintain.
 
 * No comments at all. The code itself should be self explanatory and that we should not be writing comments explaining the code. The issue is that the reader will need to spend a lot of time to go through the code and that there will always be information that is just lost in the code.
 
-This quote provides such a beautiful statement for when and for what purpose comments should be written. It solves the shortcoming of both extremes.
+This quote provides such a precise statement for when and for what purpose comments should be written. It solves the shortcoming of both extremes.
 
 ### Consistency
 
@@ -153,13 +164,11 @@ When reading a codebase or documentation, we expect it to be consistent.
 
 However when writing code or documentation it is a challenge to make everything consistent, it takes a lot of discipline.
 
-The best way to promote consistency is to keep things consistent in the first place. A consistent codebase promotes consistency, once inconsistency is introduced, things will naturally become more inconsistent. Similar to broken window effect.
+The best way to promote consistency is to keep things consistent in the first place. A consistent codebase promotes consistency, once inconsistency is introduced, things will naturally become more inconsistent. Similar to [broken window effect](https://en.wikipedia.org/wiki/Broken_windows_theory).
 
 Documentation can help with consistency. For example documentation of the terminology or coding style guidelines.
 
-When working on someone else's codebase, the best thing to do is to follow the existing way of doing things even if you don't agree with them or have a better way. If you don't do so, the code will start to become more inconsistent. If you really want to improve the way things are done in this codebase, you should change all the places at once so that it does not introduce inconsistency.
-
-Consistency is a pre-requisite for implementing any convention over configuration.
+When working on someone else's codebase, the best thing to do is to try remain consistent with the existing codebase. We should resist the urge to change how things are done even if we don't agree with it. If you do want to change something, try changing it all at once so that the end state is a consistent one.
 
 ### Writing vs reading code
 
@@ -167,18 +176,22 @@ Consistency is a pre-requisite for implementing any convention over configuratio
 
 > Software should be designed for ease of reading, not ease of writing
 
-The reader is like your user, the reader is always right. If the reader cannot understand the code, it is not his fault, it is because the code is not obvious enough.
+The reader is like the user, the reader is always right. If the reader cannot understand the code, it is not his/her fault, it is because the code is not obvious enough.
 
-Reviewing your own PR is a great way to take the reader's lens.
+Reviewing our own PR is a great way to take the reader's perspective.
 
-The reader does not only mean other people. After you've written the code, you yourself become the reader. We will eventually forget the context of when the code was written.
+The reader does not only mean other people. After we've written the code, we become the reader. We will eventually forget the context of when the code was written.
 
 The code is written only once and that is it. However, it will be read over and over again for the entire lifetime of the codebase.
 
-It will take a higher initial investment to make the code easier to read, but it will pay out dividends throughout the lifetime of the codebase. If this code is for a hackathon or proof of concept, it does not matter so much, but for a long term codebase it becomes essential. 
+It will take a higher initial investment to make the code easier to read, but it will pay out dividends throughout the lifetime of the codebase. If this code is for a hackathon or proof of concept, it does not matter so much, but for a long term codebase we need to be more conscious of such investment. 
 
 # Conclusion
 
-This book has given me useful guidelines and fundamentals on how to think about complexity. It has also shared many techniques and things to look out for which can reduce complexity.
+I like this book for the topic of why software becomes more complex and what we can do about it. It does not only share the theory but the book is filled with examples and references so that a lot of it feels practical.
 
-If you found those concepts interesting, definitively do go read the entire book, and try to put those concepts in real life.
+Many of these concepts are not entirely new for an experienced software engineer, but I could have never written these concepts down and explain them so explicitly as the author. By writing these down, it lets us become more concious about them when we're writing software.
+
+By mastering the complexity of software, I hope to be able to create more ambitious hight quality products that can stand the test of time.
+
+If you found those concepts interesting, definitively do go read the actual book, and try put those learnings when designing and writing software.
