@@ -6,8 +6,6 @@ description: "This book talks about complexity in regards to writing software. I
 date: 2025-01-08
 ---
 
-<img src="/public/2024/03/a-philosophy-of-software-design-cover.jpeg"></img>
-
 I discovered this book from a [Tweet from Antirez](https://twitter.com/antirez/status/1727706640147738998). Redis is regarded as some of the best and elegant codebases written out there, so his opinion was not to be taken lightly.
 
 I wish I had come to read this book earlier in my career as I find it more practical than the articles and other books I had read back then. I recommend this book for people who care and strive to improve the quality of their code.
@@ -187,4 +185,4 @@ Many of these concepts are not entirely new for an experienced software engineer
 
 By mastering the complexity of software, I hope to be able to create more ambitious high quality products that can stand the test of time.
 
-If you found those concepts interesting, definitely do go read the actual book, and try to put those learnings when designing and writing software.
+If you found those concepts interesting, definitely do go read the actual book, and try to put those learnings into practice when designing and writing software.
