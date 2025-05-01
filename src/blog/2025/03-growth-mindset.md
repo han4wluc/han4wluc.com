@@ -20,7 +20,7 @@ But looking at some dates:
 * A lot of this research was done in the 2000s
 * It became more recognized in the late 2000s or 2010s. And you have to consider those ideas take time to spread and become recognized.
 
-So actually I had already finished my formal education by then.
+So actually I had already finished my formal education by the time it got more broadly recognized.
 
 I think a lot of educators have some version of it and you can somehow feel it throughout the education system even if it is not explicitly mentioned to the students.
 
