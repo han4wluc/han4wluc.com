@@ -119,4 +119,33 @@ Sometimes it may be useful to start the design from an existing one rather than 
 
 
 
+## XXX
+
+1. Identify a change that you want to see in the world
+2. Start a project or build a product to achieve this change
+3. Build the skills, habits, team, company necessary to build the project or product
+
+In my case most of the time I will be building a product
+
+In my case, I may be doing a lot of it alone, but sometimes building a small team.
+
+This post will focus on the building a product.
+
+Designing the product and implementing the product.
+
+There already exists the 
+
+It stat
+
+
+
+
+
+
+
+
+
+
+
+
 
