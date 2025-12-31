@@ -1,4 +1,6 @@
 ---
+tags: [post]
+layout: bloglayout.html
 title: "Un mese in Italia: startup e tech tra Roma e Treviso"
 date: "2025-12-31"
 description: "Esperienze e luoghi nell'ecosistema startup e tech italiano"
@@ -37,6 +39,11 @@ Location strategica per le connessioni ferroviarie in tutta Italia grazie alla S
 
 Ho parlato con la 42 School: modello molto interessante, dove non ci sono insegnanti e gli studenti si auto-organizzano per imparare e aiutarsi a vicenda. Un background di studenti molto variato, con giovani ma anche adulti che hanno un lavoro e fanno part-time.
 
+![Zest Hub](/public/2025/06/zest-1.jpg)
+![Zest Hub](/public/2025/06/zest-2.jpg)
+![Zest Hub](/public/2025/06/zest-3.jpg)
+![Zest Hub](/public/2025/06/zest-4.jpg)
+
 # [AIV - Accademia Italiana Videogiochi](https://www.aiv01.it/)
 
 Situata vicino a una zona che conoscevo molto bene e che mi sta a cuore.
@@ -49,11 +56,22 @@ Praticamente è un posto dove puoi andare dopo il liceo per specializzarti nello
 
 Mi ha lasciato l'impressione che siano pratici e che insegnino competenze con progetti veri, basati sulla pratica oltre che sulla teoria.
 
+![AIV](/public/2025/06/aiv-1.jpg)
+![AIV](/public/2025/06/aiv-2.jpg)
+![AIV](/public/2025/06/aiv-3.jpg)
+![AIV](/public/2025/06/aiv-4.jpg)
+![AIV](/public/2025/06/aiv-5.jpg)
+
+
 # [H-Farm](https://www.h-farm.com/en)
 
-H-Farm è un posto assolutamente magico e incredibile. Dovevo assolutamente venire a vedere: è un Disneyland non per divertirsi, ma per formazione e lavoro. Ho guidato la macchina per oltre 7 ore da Roma per arrivare a visitare questo luogo.
+H-Farm vicino Treviso e Venezia è un campus assolutamente magico ed incredibile. Un unico campus con diverse strutture scolastiche e ecosistema startup.
 
-Nel campus ho sentito dire: "questo è l'unico posto al mondo dove si formano persone dai 3 anni ai 99 anni".
+Ho sentito dire: "questo è l'unico posto al mondo dove si formano persone dai 3 anni ai 99 anni".
+
+Il campus con la musica retrofondo da una senzazione di un parco giocho ma non per divertirsi, ma per vivere, imparare e lavorare.
+
+Dovevo assolutamente venire a vedere. Ho guidato la macchina per oltre 7 ore da Roma per arrivare a visitare questo luogo.
 
 Ho visitato la scuola primaria: tutto ok come scuola internazionale, strutture moderne, si inizia con concetti di coding da piccoli.
 
@@ -61,9 +79,15 @@ Ho pranzato alla Sella. Cibo meraviglioso. Le persone possono lavorare negli uff
 
 Ho visitato la business school per un evento, hanno parlato di una ricerca sull'adozione dell'Intelligenza Artificiale in Italia, topic interessante e professore molto competente ed esperto della materia.
 
-Unplugged sembrava un bell'evento organizzato da H-Farm, ma per certe ragioni me ne sono dovuto andare prima. L'evento era sulla Collina, vicino alla libreria.
+La sera sono andato ad attendere Unplugged, un evento organizzato da H-Farm sul topic dell'intelligenza artificiale. L'evento era sulla Collina, vicino alla libreria.
+
+![H-Farm](/public/2025/06/hfarm-4.jpg)
 
 Non sono della zona, quindi non mi sento connesso come a Roma, ma è un progetto grandioso e molto interessante.
+
+![H-Farm](/public/2025/06/hfarm-1.jpg)
+![H-Farm](/public/2025/06/hfarm-2.jpg)
+![H-Farm](/public/2025/06/hfarm-3.jpg)
 
 # Meetup dei meetup
 
@@ -79,6 +103,8 @@ Nel gruppo ci sono stati 3 talk:
 
 Le presentazioni sono state fatte in inglese invece che in italiano, per accogliere alcune persone del pubblico che non parlavano italiano. I topic non erano esattamente del mio interesse, ma l'atmosfera mi è piaciuta.
 
+![RomaJS Meetup](/public/2025/06/romajs-1.jpg)
+
 # [AIVB - AI Venture Builder](https://aivb.ai/en/home-en/)
 
 Ho avuto la fortuna di aver potuto partecipare ad uno dei loro eventi.
@@ -88,6 +114,9 @@ Per una startup, essere profittevole nei primi anni è incredibile. È un modo d
 Ammiro molto la diligenza e come riescono sempre a partire dal cliente, costruire connessioni B2B e farsi pagare per creare i primi MVP.
 
 Ho parlato con il team di sviluppo AI, un team molto amichevole e competente. In Italia ed Europa il talento c'è, e sono felice che abbiano un'opportunità come questa.
+
+![AIVB](/public/2025/06/aivb-1.jpg)
+![AIVB](/public/2025/06/aivb-2.jpg)
 
 # Conclusione
 
