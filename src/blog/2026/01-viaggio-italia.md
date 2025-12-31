@@ -1,7 +1,7 @@
 ---
 tags: [post]
 layout: bloglayout.html
-title: "Un mese in Italia: startup e tech tra Roma e Treviso"
+title: "Un mese in Italia: startup e tech tra Roma e Veneto"
 date: "2025-12-31"
 description: "Esperienze e luoghi nell'ecosistema startup e tech italiano"
 ---
@@ -39,10 +39,10 @@ Location strategica per le connessioni ferroviarie in tutta Italia grazie alla S
 
 Ho parlato con la 42 School: modello molto interessante, dove non ci sono insegnanti e gli studenti si auto-organizzano per imparare e aiutarsi a vicenda. Un background di studenti molto variato, con giovani ma anche adulti che hanno un lavoro e fanno part-time.
 
-![Zest Hub](/public/2025/06/zest-1.jpg)
-![Zest Hub](/public/2025/06/zest-2.jpg)
-![Zest Hub](/public/2025/06/zest-3.jpg)
-![Zest Hub](/public/2025/06/zest-4.jpg)
+![Zest Hub](/public/2026/01/zest-1.jpg)
+![Zest Hub](/public/2026/01/zest-2.jpg)
+![Zest Hub](/public/2026/01/zest-3.jpg)
+![Zest Hub](/public/2026/01/zest-4.jpg)
 
 # [AIV - Accademia Italiana Videogiochi](https://www.aiv01.it/)
 
@@ -56,11 +56,13 @@ Praticamente è un posto dove puoi andare dopo il liceo per specializzarti nello
 
 Mi ha lasciato l'impressione che siano pratici e che insegnino competenze con progetti veri, basati sulla pratica oltre che sulla teoria.
 
-![AIV](/public/2025/06/aiv-1.jpg)
-![AIV](/public/2025/06/aiv-2.jpg)
-![AIV](/public/2025/06/aiv-3.jpg)
-![AIV](/public/2025/06/aiv-4.jpg)
-![AIV](/public/2025/06/aiv-5.jpg)
+Dei gruppi di studenti stavano per lanciare dei giochi su Steam, e avevano il gioco lì per il pubblico da provare.
+
+![AIV](/public/2026/01/aiv-1.jpg)
+![AIV](/public/2026/01/aiv-2.jpg)
+![AIV](/public/2026/01/aiv-3.jpg)
+![AIV](/public/2026/01/aiv-4.jpg)
+![AIV](/public/2026/01/aiv-5.jpg)
 
 
 # [H-Farm](https://www.h-farm.com/en)
@@ -81,17 +83,17 @@ Ho visitato la business school per un evento, hanno parlato di una ricerca sull'
 
 La sera sono andato ad attendere Unplugged, un evento organizzato da H-Farm sul topic dell'intelligenza artificiale. L'evento era sulla Collina, vicino alla libreria.
 
-![H-Farm](/public/2025/06/hfarm-4.jpg)
+![H-Farm](/public/2026/01/hfarm-4.jpg)
 
-Non sono della zona, quindi non mi sento connesso come a Roma, ma è un progetto grandioso e molto interessante.
+Non sono della zona, quindi non mi sento connesso come a Roma, ma è un progetto grandioso.
 
-![H-Farm](/public/2025/06/hfarm-1.jpg)
-![H-Farm](/public/2025/06/hfarm-2.jpg)
-![H-Farm](/public/2025/06/hfarm-3.jpg)
+![H-Farm](/public/2026/01/hfarm-1.jpg)
+![H-Farm](/public/2026/01/hfarm-2.jpg)
+![H-Farm](/public/2026/01/hfarm-3.jpg)
 
 # Meetup dei meetup
 
-Praticamente hanno messo 6 meetup insieme che si incontrano tutti, visto che dicembre è un mese corto. E ha funzionato. Grazie a OpenSense per l'evento e il cibo!
+Praticamente hanno messo 6 meetup insieme che si incontrano tutti insieme invece di farli separati visto che dicembre è un mese corto. E ha funzionato. Grazie a Sourcesense per l'evento e il delizioso apertivo!
 
 [RomaJS](https://romajs.org/en/) era il meetup con cui mi ero registrato. Hanno un canale YouTube con tutti i video. Un meetup attivo da più di 10 anni. È stato bello vedere un po' cosa fanno.
 
@@ -103,7 +105,7 @@ Nel gruppo ci sono stati 3 talk:
 
 Le presentazioni sono state fatte in inglese invece che in italiano, per accogliere alcune persone del pubblico che non parlavano italiano. I topic non erano esattamente del mio interesse, ma l'atmosfera mi è piaciuta.
 
-![RomaJS Meetup](/public/2025/06/romajs-1.jpg)
+![RomaJS Meetup](/public/2026/01/romajs-1.jpg)
 
 # [AIVB - AI Venture Builder](https://aivb.ai/en/home-en/)
 
@@ -115,10 +117,10 @@ Ammiro molto la diligenza e come riescono sempre a partire dal cliente, costruir
 
 Ho parlato con il team di sviluppo AI, un team molto amichevole e competente. In Italia ed Europa il talento c'è, e sono felice che abbiano un'opportunità come questa.
 
-![AIVB](/public/2025/06/aivb-1.jpg)
-![AIVB](/public/2025/06/aivb-2.jpg)
+![AIVB](/public/2026/01/aivb-1.jpg)
+![AIVB](/public/2026/01/aivb-2.jpg)
 
 # Conclusione
 
-Durante questo viaggio ho imparato molto di più riguardo Roma e l'Italia, e mi piace. Voglio continuare a esplorare che tipo di collaborazioni o lavori posso fare con l'Italia, anche da remoto, e connettermi di più.
+Durante questo viaggio ho imparato di più riguardo l'ecosistema startup a Roma e l'Italia, e mi piace. Voglio continuare a esplorare che tipo di collaborazioni o lavori posso fare con l'Italia, anche da remoto, e connettermi di più.
 
