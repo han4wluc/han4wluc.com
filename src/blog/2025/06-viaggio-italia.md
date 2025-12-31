@@ -1,105 +1,95 @@
+---
+title: "Un mese in Italia: startup e tech tra Roma e Treviso"
+date: "2025-12-31"
+description: "Esperienze e luoghi nell'ecosistema startup e tech italiano"
+---
 
-Ho speso del tempo in Italia a Novembre e Dicembre.
+Ho passato del tempo in Italia a novembre e dicembre.
 
-Sono cresciuto in Italia, ma sono andato via quando avevo 17 anni. Poi sono solo tornato per periodi brevi ogni qualche anno. Per tanti anni, non mi e' mancato, ma recentemente ho avuto voglia di spendere piu' di imparare piu' e di fare piu' a che fare con Italia. Mi fa piacere lavorare di piu' con Italia ed Europa.
+Sono cresciuto in Italia, ma sono andato via quando avevo 17 anni. Poi sono tornato solo per periodi brevi ogni qualche anno. Per tanti anni non mi è mancata, ma recentemente ho avuto voglia di imparare di più e di avere più a che fare con l'Italia. Mi fa piacere lavorare di più con Italia ed Europa.
 
-Sotto, condivido qualche esperienza e luoghi dove mi sono trovato bene nel contesto di startup e ingengneria informatica.
+Sotto, condivido qualche esperienza e alcuni luoghi dove mi sono trovato bene, nel contesto di startup e ingegneria informatica.
 
-Non so esattamente per quale motivo, ho sempre pensato che Italia fosse non il posto dove essere, ma dopo essere vissuto in altri paesi, direi che ci sono sempre vantaggi e svantaggi.
+Non so esattamente per quale motivo, ho sempre pensato che l'Italia non fosse il posto dove stare, ma dopo essere vissuto in altri paesi, direi che ci sono sempre vantaggi e svantaggi.
 
-Ce cosi' tanto che non sapevo di Roma anche se sono cresiuto li', ma guardando meglio ci si accorge che le cose buone ci sono. Il problema non e' stato Roma, ma e' stato me che non ho voluto o non ho fatto la sforza di cercare.
+C'è così tanto che non sapevo di Roma, anche se sono cresciuto lì. Ma guardando meglio ci si accorge che le cose buone ci sono. Il problema non è il posto dove sono cresciuto, ma sono stato io che non ho voluto o non ho fatto lo sforzo di cercare.
 
-Ho avuto una grandissima fortuna di essere stato li durange un periodo con tanti eventi.
+Ho avuto una grandissima fortuna di essere stato lì durante un periodo con tanti eventi aver potuto trovare cose interessanti.
 
-# Zest Hub
+# [Zest Hub](https://zestgroup.vc/en/thehub)
 
-Prima era Luiss EnLabs. recentenmente con la fusione con Digital Magic, e' dientato Zest Hub.
+Zest è un fondo di venture capital, ma oltre agli investimenti hanno anche questa grande struttura. Prima era Luiss EnLabs. Qualche anno fa, con la fusione con Digital Magics, è diventato Zest Hub.
 
-Ero venuto qui per divense volte prima per diversi eventi. Mi e' sempre apparso un posto meraviglioso. Per questo mese, ho avuto la fortuna di prendere un co-working space, e spendere un po' di tempo li'.
+Ero venuto qui diverse volte negli anni passati per vari eventi. Mi è sempre sembrato un posto meraviglioso. Per un mese ho avuto la fortuna di prendere un posto nel co-working e passare un po' di tempo lì.
 
-Architettura e design grandioso, atmosfera molto startup.
-
-Se avessi una startup a Roma, vorrei localizzarla qui'.
+Architettura e design grandiosi, atmosfera molto startup.
 
 Ha tante strutture sotto lo stesso tetto:
 
 - area co-working
 - uffici privati
-- 48 Scuola
-- aree per eventi, ci sono tanti eventi organizzati qui.
+- 42 School
+- aree per eventi — ce ne sono tanti organizzati qui
 
-location strattegico per le connessioni treni in tutta italia con stazione Termini, la gente puo' venire qui a fare colloqui e poi facilmente andara=v ia
+Un bel mix che crea tante sinergie.
 
-metro per lavoratori a Roma
+Location strategica per le connessioni ferroviarie in tutta Italia grazie alla Stazione Termini: si può venire qui a fare colloqui e poi facilmente andare via. Metro comoda per connettersi a Roma.
 
-un po' tradizionale come ufficio, sono venuto qui a lavorare nel coworking per un mese
+Ho parlato con la 42 School: modello molto interessante, dove non ci sono insegnanti e gli studenti si auto-organizzano per imparare e aiutarsi a vicenda. Un background di studenti molto variato, con giovani ma anche adulti che hanno un lavoro e fanno part-time.
 
-# AIV - Academia Italiana Videogiochi
+# [AIV - Accademia Italiana Videogiochi](https://www.aiv01.it/)
 
-situato vicino in un luogo che conoscevo molto bene
+Situata vicino a una zona che conoscevo molto bene e che mi sta a cuore.
 
-e' una scuola che addestra studenti per videogiochi
+È una scuola che forma studenti per l'industria dei videogiochi.
 
-sono infiltrato per un open day, ma mi hanno detto pure non studenti erano benvenuti.
+Mi sono infiltrato per un open day, ma mi hanno detto che anche i non studenti erano benvenuti.
 
-praticamente e' un posto dove puoi andare dopo il liceo per specializzarti in sviluppo video giochi, hanno diversi corsi.
+Praticamente è un posto dove puoi andare dopo il liceo per specializzarti nello sviluppo di videogiochi. Hanno diversi corsi.
 
-mi ha lasciato impressione, che sono pratici e ti insegnno skills con progetti veri.
+Mi ha lasciato l'impressione che siano pratici e che insegnino competenze con progetti veri, basati sulla pratica oltre che sulla teoria.
 
-# H-Farm
+# [H-Farm](https://www.h-farm.com/en)
 
-H-Farm e' un posto assulutamente magico ed incredibile.
-Dovevo assolutamente venire a vedere.. e' un DisneyLand non per divertirsi ma un Disneyland per formazione e lavoro.
-Nel campus ho sentito dire: 'questo e' unico posto al mondo dove si formano personda dai 3 anni ai 99 anni
+H-Farm è un posto assolutamente magico e incredibile. Dovevo assolutamente venire a vedere: è un Disneyland non per divertirsi, ma per formazione e lavoro. Ho guidato la macchina per oltre 7 ore da Roma per arrivare a visitare questo luogo.
 
+Nel campus ho sentito dire: "questo è l'unico posto al mondo dove si formano persone dai 3 anni ai 99 anni".
 
-Ho visitato la scuola primaria, tutto ok, come scuola internazionale. facily moderne. inizio con concetti coding da piccoli.
+Ho visitato la scuola primaria: tutto ok come scuola internazionale, strutture moderne, si inizia con concetti di coding da piccoli.
 
-ho visitato la business schoool per una conferenza riguardo AI
+Ho pranzato alla Sella. Cibo meraviglioso. Le persone possono lavorare negli uffici startup vicino e poi venire qui per mangiare.
 
-Unplugged sembrava un bel evento da H-Farm, ma per certe ragioni mene sono dovuto andare prima.
-Evento sulla Collina. Vicno alla libreria.
+Ho visitato la business school per un evento, hanno parlato di una ricerca sull'adozione dell'Intelligenza Artificiale in Italia, topic interessante e professore molto competente ed esperto della materia.
 
-Mangiato alla Sella, sembra una mensa. lavori nel ufficio vicino e vieni qui per pranzo, cibo meraviglioso.
+Unplugged sembrava un bell'evento organizzato da H-Farm, ma per certe ragioni me ne sono dovuto andare prima. L'evento era sulla Collina, vicino alla libreria.
 
-Non sono della zona, quindi non mi sento connesso come sono a Roma, ma e' un vero progetto grandioso e molto moderno.
+Non sono della zona, quindi non mi sento connesso come a Roma, ma è un progetto grandioso e molto interessante.
 
 # Meetup dei meetup
 
-Praticamente, hanno messo 6 meetup insieme che si incontrano tutti, visto che Dicembre e' un mese corto. e ha funzionato.
+Praticamente hanno messo 6 meetup insieme che si incontrano tutti, visto che dicembre è un mese corto. E ha funzionato. Grazie a OpenSense per l'evento e il cibo!
 
-RomaJS e' un meetup meraviglioso. hanno un canale Youtube con tutti i video
+[RomaJS](https://romajs.org/en/) era il meetup con cui mi ero registrato. Hanno un canale YouTube con tutti i video. Un meetup attivo da più di 10 anni. È stato bello vedere un po' cosa fanno.
 
 Nel gruppo ci sono stati 3 talk:
 
 - Causal Machine Learning
-- Angualr Forms with Signal
-- Intro to Atro
+- Angular Forms with Signals
+- Intro to Astro
 
-Le presentazione sono state fatte in Inglese invece di Italiano. Sembra per accogliere certe persone del pubblicno che non parlavano Italiano.
+Le presentazioni sono state fatte in inglese invece che in italiano, per accogliere alcune persone del pubblico che non parlavano italiano. I topic non erano esattamente del mio interesse, ma l'atmosfera mi è piaciuta.
 
-# AIVB - AI Venture Builder
+# [AIVB - AI Venture Builder](https://aivb.ai/en/home-en/)
 
-Per una startup essere profitevole nei primi anni e' incredibile. e' un modo di operare completamente diverso dalle startup piu' conosciuto devo briuciano su tantissimi soldi.
+Ho avuto la fortuna di aver potuto partecipare ad uno dei loro eventi.
 
-Ammiro molto la diligenza, e come riescono sempre ad iniziare dal cliente, costruire connessioni B2B, e farsi pagare per create i primi MVP.
+Per una startup, essere profittevole nei primi anni è incredibile. È un modo di operare completamente diverso dalle startup più conosciute, dove bruciano tantissimi soldi.
 
-Ho parlato con il team di sviluppo AI, un team molto competente. In Italia ed Europa il talento ce', e sono felice che hanno una opportunita' come questa.
+Ammiro molto la diligenza e come riescono sempre a partire dal cliente, costruire connessioni B2B e farsi pagare per creare i primi MVP.
+
+Ho parlato con il team di sviluppo AI, un team molto amichevole e competente. In Italia ed Europa il talento c'è, e sono felice che abbiano un'opportunità come questa.
 
 # Conclusione
 
-Durante questo viaggio, ho imparato molto di piu' riguardo Roma e Italia, e mi piace. In verita' certi di questi e' frutto perche in anni precendenti mi ero connesso.
-Come fare dopo:
-Continuo a connettermi con Roma e Italia, e cercare di creare connessioni da remoto, investendo il mio tempo e avere piu' a che fare con Roma. 
-
-
-
-
-
-
-
-
-
-
-
+Durante questo viaggio ho imparato molto di più riguardo Roma e l'Italia, e mi piace. Voglio continuare a esplorare che tipo di collaborazioni o lavori posso fare con l'Italia, anche da remoto, e connettermi di più.
 
