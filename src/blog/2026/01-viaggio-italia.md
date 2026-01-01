@@ -103,7 +103,7 @@ Non sono della zona, quindi non mi sento connesso come a Roma, ma è un progetto
 
 # Meetup dei meetup
 
-Praticamente hanno messo 6 meetup insieme che si incontrano tutti insieme invece di farli separati visto che dicembre è un mese corto. E ha funzionato. Grazie a Sourcesense per l'evento e il delizioso apertivo!
+Praticamente hanno messo 6 meetup insieme che si incontrano tutti insieme invece di farli separati visto che dicembre è un mese corto. E ha funzionato. Grazie a [Sourcesense](https://www.sourcesense.com/) per l'evento e il delizioso apertivo!
 
 [RomaJS](https://romajs.org/en/) era il meetup con cui mi ero registrato. Hanno un canale YouTube con tutti i video. Un meetup attivo da più di 10 anni. È stato bello vedere un po' cosa fanno.
 
