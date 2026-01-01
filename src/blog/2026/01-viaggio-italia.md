@@ -1,8 +1,8 @@
 ---
 tags: [post]
 layout: bloglayout.html
-title: "Un mese in Italia: startup e tech tra Roma e Veneto"
-date: "2025-12-31"
+title: "Un mese in Italia: startup e tech in Italia"
+date: "2026-01-01"
 description: "Esperienze e luoghi nell'ecosistema startup e tech italiano"
 ---
 
