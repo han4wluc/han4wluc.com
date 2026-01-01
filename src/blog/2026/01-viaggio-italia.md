@@ -20,31 +20,38 @@ Ho avuto una grandissima fortuna di essere stato lì durante un periodo con tant
 
 # [Zest Hub](https://zestgroup.vc/en/thehub)
 
+![Zest Hub](/public/2026/01/zest-2.jpg)
+
 Zest è un fondo di venture capital, ma oltre agli investimenti hanno anche questa grande struttura. Prima era Luiss EnLabs. Qualche anno fa, con la fusione con Digital Magics, è diventato Zest Hub.
 
 Ero venuto qui diverse volte negli anni passati per vari eventi. Mi è sempre sembrato un posto meraviglioso. Per un mese ho avuto la fortuna di prendere un posto nel co-working e passare un po' di tempo lì.
 
-Architettura e design grandiosi, atmosfera molto startup.
+Architettura e design molto belli, circondata da varie startup.
 
 Ha tante strutture sotto lo stesso tetto:
 
 - area co-working
 - uffici privati
 - 42 School
-- aree per eventi — ce ne sono tanti organizzati qui
+- aree per eventi
 
 Un bel mix che crea tante sinergie.
 
+![Zest Hub](/public/2026/01/zest-1.jpg)
+![Zest Hub](/public/2026/01/zest-3.jpg)
+![Zest Hub](/public/2026/01/zest-6.jpg)
+
+
 Location strategica per le connessioni ferroviarie in tutta Italia grazie alla Stazione Termini: si può venire qui a fare colloqui e poi facilmente andare via. Metro comoda per connettersi a Roma.
 
-Ho parlato con la 42 School: modello molto interessante, dove non ci sono insegnanti e gli studenti si auto-organizzano per imparare e aiutarsi a vicenda. Un background di studenti molto variato, con giovani ma anche adulti che hanno un lavoro e fanno part-time.
+Ho parlato con studenta della 42 School: modello molto interessante, dove non ci sono insegnanti e gli studenti si auto-organizzano per imparare e aiutarsi a vicenda. Un background di studenti molto variato, con giovani ma anche adulti che hanno un lavoro e fanno part-time.
 
-![Zest Hub](/public/2026/01/zest-1.jpg)
-![Zest Hub](/public/2026/01/zest-2.jpg)
-![Zest Hub](/public/2026/01/zest-3.jpg)
-![Zest Hub](/public/2026/01/zest-4.jpg)
+![Zest Hub](/public/2026/01/zest-5.jpg)
+![Zest Hub](/public/2026/01/zest-7.jpg)
 
 # [AIV - Accademia Italiana Videogiochi](https://www.aiv01.it/)
+
+![AIV](/public/2026/01/aiv-2.jpg)
 
 Situata vicino a una zona che conoscevo molto bene e che mi sta a cuore.
 
@@ -58,14 +65,14 @@ Mi ha lasciato l'impressione che siano pratici e che insegnino competenze con pr
 
 Dei gruppi di studenti stavano per lanciare dei giochi su Steam, e avevano il gioco lì per il pubblico da provare.
 
-![AIV](/public/2026/01/aiv-1.jpg)
-![AIV](/public/2026/01/aiv-2.jpg)
 ![AIV](/public/2026/01/aiv-3.jpg)
 ![AIV](/public/2026/01/aiv-4.jpg)
 ![AIV](/public/2026/01/aiv-5.jpg)
 
 
 # [H-Farm](https://www.h-farm.com/en)
+
+![H-Farm](/public/2026/01/hfarm-5.jpg)
 
 H-Farm vicino Treviso e Venezia è un campus assolutamente magico ed incredibile. Un unico campus con diverse strutture scolastiche e ecosistema startup.
 
@@ -77,19 +84,22 @@ Dovevo assolutamente venire a vedere. Ho guidato la macchina per oltre 7 ore da 
 
 Ho visitato la scuola primaria: tutto ok come scuola internazionale, strutture moderne, si inizia con concetti di coding da piccoli.
 
-Ho pranzato alla Sella. Cibo meraviglioso. Le persone possono lavorare negli uffici startup vicino e poi venire qui per mangiare.
+Ho pranzato a La Serra. Cibo delizioso. Le persone possono lavorare negli uffici startup vicino e poi venire qui per mangiare.
+
+![H-Farm](/public/2026/01/hfarm-7.jpg)
 
 Ho visitato la business school per un evento, hanno parlato di una ricerca sull'adozione dell'Intelligenza Artificiale in Italia, topic interessante e professore molto competente ed esperto della materia.
 
-La sera sono andato ad attendere Unplugged, un evento organizzato da H-Farm sul topic dell'intelligenza artificiale. L'evento era sulla Collina, vicino alla libreria.
+La sera sono andato ad attendere Unplugged, un evento organizzato da H-Farm sul topic dell'intelligenza artificiale. L'evento era sulla Collina, che ospita anche una libreria al piano superiore.
 
+![H-Farm](/public/2026/01/hfarm-2.jpg)
 ![H-Farm](/public/2026/01/hfarm-4.jpg)
 
-Non sono della zona, quindi non mi sento connesso come a Roma, ma è un progetto grandioso.
+Non sono della zona, quindi non mi sento connesso come a Roma, ma è un progetto grandioso. 
 
 ![H-Farm](/public/2026/01/hfarm-1.jpg)
-![H-Farm](/public/2026/01/hfarm-2.jpg)
 ![H-Farm](/public/2026/01/hfarm-3.jpg)
+![H-Farm](/public/2026/01/hfarm-6.jpg)
 
 # Meetup dei meetup
 
@@ -109,15 +119,18 @@ Le presentazioni sono state fatte in inglese invece che in italiano, per accogli
 
 # [AIVB - AI Venture Builder](https://aivb.ai/en/home-en/)
 
+![AIVB](/public/2026/01/aivb-1.jpg)
+
 Ho avuto la fortuna di aver potuto partecipare ad uno dei loro eventi.
 
-Per una startup, essere profittevole nei primi anni è incredibile. È un modo di operare completamente diverso dalle startup più conosciute, dove bruciano tantissimi soldi.
+Hanno recentemente raccolto fondi tramite Republic.
+
+Per una startup, essere profittevole nei 2 anni è impresionante. È un modo di operare completamente diverso dalle startup più conosciute, dove bruciano tantissimi soldi.
 
 Ammiro molto la diligenza e come riescono sempre a partire dal cliente, costruire connessioni B2B e farsi pagare per creare i primi MVP.
 
 Ho parlato con il team di sviluppo AI, un team molto amichevole e competente. In Italia ed Europa il talento c'è, e sono felice che abbiano un'opportunità come questa.
 
-![AIVB](/public/2026/01/aivb-1.jpg)
 ![AIVB](/public/2026/01/aivb-2.jpg)
 
 # Conclusione
