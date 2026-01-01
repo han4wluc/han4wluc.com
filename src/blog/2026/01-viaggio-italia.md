@@ -2,7 +2,7 @@
 tags: [post]
 layout: bloglayout.html
 title: "Un mese in Italia: startup e tech in Italia"
-date: "2026-01-01"
+date: 2026-01-01
 description: "Esperienze e luoghi nell'ecosistema startup e tech italiano"
 ---
 
