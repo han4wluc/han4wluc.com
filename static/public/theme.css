@@ -1,0 +1,131 @@
+html {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Roboto, -apple-system, "Helvetica Neue", sans-serif;
+  display: flex;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+#outer-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: var(--spacing-xl);
+  color: var(--foreground);
+}
+
+.post-list {
+  padding-left: 20px;
+}
+
+.article-content {
+  color: var(--foreground);
+}
+
+.article-content > :first-child {
+  margin-top: 0;
+}
+
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  color: var(--foreground);
+  font-weight: 600;
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.article-content h1 {
+  font-size: var(--h1-font-size);
+  line-height: var(--h1-line-height);
+}
+
+.article-content h2 {
+  font-size: var(--h2-font-size);
+  line-height: var(--h2-line-height);
+}
+
+.article-content h3,
+.article-content h4 {
+  font-size: var(--h3-font-size);
+  line-height: var(--h3-line-height);
+}
+
+.article-content p,
+.article-content li {
+  color: var(--foreground);
+  font-size: var(--lg-font-size);
+  line-height: var(--lg-line-height);
+}
+
+.article-content p,
+.article-content ul,
+.article-content ol,
+.article-content blockquote,
+.article-content pre,
+.article-content img {
+  margin-top: 0;
+  margin-bottom: var(--spacing-xl);
+}
+
+.article-content pre {
+  white-space: break-spaces;
+  color: var(--foreground);
+  background-color: var(--muted);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-sm);
+  overflow-x: auto;
+}
+
+.article-content blockquote {
+  margin: 0 0 var(--spacing-xl) 0;
+  padding: var(--spacing-lg);
+  background-color: var(--muted);
+  border-left: 4px solid var(--foreground);
+  color: var(--foreground);
+}
+
+.article-content code,
+rtgl-text > code {
+  background-color: var(--muted);
+  padding: 3px 6px;
+  border-radius: 6px;
+  color: var(--foreground);
+  font-size: 80%;
+}
+
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-sm);
+}

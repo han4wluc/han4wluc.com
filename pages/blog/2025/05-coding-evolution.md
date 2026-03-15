@@ -1,9 +1,10 @@
 ---
 tags: [post]
-layout: bloglayout.html
+template: post
 title: Reflection on how programming changed over last 2 years
 description: A reflection on how programming has comletely transformed in the last 2 years with generative AI technologies such as Github Copilot, Cursor, Claude Code
 date: 2025-09-01
+author: han4wluc
 ---
 
 ## Intro

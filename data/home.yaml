@@ -1,0 +1,20 @@
+name:
+  primary: Luciano Hanyon Wu
+  secondary: 吴汉勇
+bio: I'm a software engineer based in Singapore. I grew up in Italy, I have previously lived in China and Japan.
+socials:
+  - label: X (Twitter)
+    href: https://twitter.com/han4wluc
+    target: _blank
+  - label: LinkedIn
+    href: https://www.linkedin.com/in/han4wluc
+    target: _blank
+projects:
+  - title: RouteVN
+    href: https://routevn.com
+    target: _blank
+    description: a platform to create and publish Visual Novels
+  - title: rettangoli
+    href: https://github.com/yuusoft-org/rettangoli
+    target: _blank
+    description: fullstack js framework

@@ -1,0 +1,56 @@
+- html lang="en":
+    - head:
+        - meta charset="utf-8":
+        - meta name="viewport" content="width=device-width, initial-scale=1.0":
+        - title: ${title}
+        - meta name="description" content="${description}":
+        - meta property="og:title" content="${title}":
+        - meta property="og:description" content="${description}":
+        - meta property="og:site_name" content="${site.title}":
+        - meta property="og:type" content="website":
+        - meta property="og:url" content="${site.baseUrl}${page.url}":
+        - link rel="prefetch" href="/blog/":
+        - script:
+            - |
+              window.rtglIcons = {};
+        - link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@rettangoli/ui@1.0.10/dist/themes/base.css":
+        - link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@rettangoli/ui@1.0.10/dist/themes/theme-rtgl-slate.css":
+        - script src="https://cdn.jsdelivr.net/npm/construct-style-sheets-polyfill@3.1.0/dist/adoptedStyleSheets.min.js":
+        - script src="https://cdn.jsdelivr.net/npm/@rettangoli/ui@1.0.10/dist/rettangoli-iife-ui.min.js":
+        - link href="/public/theme.css" rel="stylesheet":
+
+    - body.dark:
+        - rtgl-view w="f" h="f" ah="c" av="c" md-av="s" bgc="bg" ph="xl" pv="xl" lg-pv="xl" md-pv="lg":
+            - rtgl-view w="720" lg-w="640" md-w="f":
+                - rtgl-view h="160" lg-h="124" md-h="72":
+                - rtgl-text s="h2" c="fg" mb="md": ${home.name.primary}
+                - rtgl-text s="h2" c="fg" mb="md": ${home.name.secondary}
+                - rtgl-text s="lg" c="fg": ${home.bio}
+
+                - rtgl-view g="sm" mt="lg":
+                    - $for social in home.socials:
+                        - rtgl-text s="md" c="fg":
+                            - a href="${social.href}" target="${social.target}": ${social.label}
+
+                - rtgl-text s="h3" c="fg" mt="xl" mb="md": Projects
+
+                - rtgl-view g="md":
+                    - $for project in home.projects:
+                        - rtgl-view:
+                            - rtgl-text s="h4" c="fg":
+                                - a href="${project.href}" target="${project.target}": ${project.title}
+                            - rtgl-text s="md" c="fg": ${project.description}
+
+                - rtgl-text s="h3" c="fg" mt="xl" mb="md": Blog
+
+                - rtgl-view g="md":
+                    - ul class="post-list":
+                        - $for post in sort(collections.post, "data.date", "desc"):
+                            - li:
+                                - rtgl-view:
+                                    - rtgl-text c="fg" s="h4":
+                                        - a href="${post.url}": ${post.data.title}
+
+                - rtgl-text s="md" c="fg" mt="sm":
+                    - a href="/blog/": View all posts
+                - rtgl-view h="96" lg-h="80" md-h="48":

@@ -1,9 +1,10 @@
 ---
 tags: [post]
-layout: bloglayout.html
+template: post
 title: 'Book Review: A Philosophy of Software Design'
 description: "This book talks about complexity in regards to writing software. It helps us understand what complexity is andfrom and what causes it. In this article, I share my opinions and notes."
 date: 2025-01-08
+author: han4wluc
 ---
 
 I discovered this book from a [Tweet from Antirez](https://twitter.com/antirez/status/1727706640147738998). Redis is regarded as some of the best and elegant codebases written out there, so his opinion was not to be taken lightly.

@@ -1,0 +1,3 @@
+markdownit:
+  html: true
+  headingAnchors: false

@@ -1,9 +1,10 @@
 ---
 tags: [post]
-layout: bloglayout.html
+template: post
 title: Adopting a Growth Mindset
 description: Growth Mindset is one of the first things I have my interns, mentees, or junior colleagues read about. In this post, I explore why Growth Mindset is so impactful and offer suggestions on how to practice it in your workspace and life.
 date: 2025-05-01
+author: han4wluc
 ---
 
 I have learned about the term or the concept of Growth Mindset officially only when I was almost 30 years old, after 2020.

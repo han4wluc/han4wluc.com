@@ -1,8 +1,9 @@
 ---
 tags: [post]
-layout: bloglayout.html
+template: post
 title: "Un mese in Italia: startup e tech in Italia"
 date: 2026-01-01
+author: han4wluc
 description: "Esperienze e luoghi nell'ecosistema startup e tech italiano"
 ---
 
