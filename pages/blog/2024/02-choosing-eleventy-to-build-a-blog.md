@@ -1,9 +1,10 @@
 ---
 tags: [post]
-layout: bloglayout.html
+template: post
 title: Choosing Eleventy to build a blog
 description: In this blog post, I describe why I choose Eleventy for my blog. Eleventy is tool that provides essential features to build a blog and introducing only minimal complexity.
 date: 2024-05-13
+author: han4wluc
 ---
 
 In this post, I will go through why I choose [Eleventy](https://www.11ty.dev/) and how I use it to build this blog.

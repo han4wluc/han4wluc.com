@@ -1,11 +1,10 @@
 {
   "scripts": {
-    "dev": "npx @11ty/eleventy --config .eleventy.js --serve --port 3000",
-    "build": "npx @11ty/eleventy --config .eleventy.js"
+    "dev": "npm run watch",
+    "watch": "rtgl sites watch -p 3000 -o dist",
+    "build": "rtgl sites build -o dist"
   },
   "devDependencies": {
-    "html-minifier": "^4.0.0",
-    "luxon": "^3.4.4",
-    "markdown-it": "^14.1.0"
+    "rtgl": "^1.0.7"
   }
 }

@@ -1,0 +1,34 @@
+- html lang="en":
+    - head:
+        - meta charset="utf-8":
+        - meta name="viewport" content="width=device-width, initial-scale=1.0":
+        - title: ${title}
+        - meta name="description" content="${description}":
+        - meta property="og:title" content="${title}":
+        - meta property="og:description" content="${description}":
+        - meta property="og:site_name" content="${site.title}":
+        - meta property="og:type" content="website":
+        - meta property="og:url" content="${site.baseUrl}${page.url}":
+        - script:
+            - |
+              window.rtglIcons = {};
+        - link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@rettangoli/ui@1.0.10/dist/themes/base.css":
+        - link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@rettangoli/ui@1.0.10/dist/themes/theme-rtgl-slate.css":
+        - script src="https://cdn.jsdelivr.net/npm/construct-style-sheets-polyfill@3.1.0/dist/adoptedStyleSheets.min.js":
+        - script src="https://cdn.jsdelivr.net/npm/@rettangoli/ui@1.0.10/dist/rettangoli-iife-ui.min.js":
+        - link href="/public/theme.css" rel="stylesheet":
+
+    - body.dark:
+        - rtgl-view w="f" ah="c" bgc="bg" p="xl":
+            - rtgl-view w="760" lg-w="680" md-w="f":
+                - rtgl-text c="fg" s="sm":
+                    - a href="/": Back
+                - rtgl-view g="lg" mt="xl":
+                    - $for post in sort(collections.post, "data.date", "desc"):
+                        - rtgl-view d="h" g="lg" av="s" md-d="v" md-g="sm":
+                            - rtgl-view w="160" md-w="f":
+                                - rtgl-view h="36" av="c":
+                                    - rtgl-text c="mu" s="sm": ${formatDate(post.data.date, "MMM D, YYYY")}
+                            - rtgl-view w="1fg" md-w="f":
+                                - rtgl-text c="fg" s="h4":
+                                    - a href="${post.url}": ${post.data.title}

@@ -1,9 +1,10 @@
 ---
 tags: [post]
-layout: bloglayout.html
+template: post
 title: What I Look for in Intern Resumes
 description: 'My screening criteria for intern resumes: personal projects, personal website/blog, school/awards, previous internships.'
 date: 2025-06-24
+author: han4wluc
 ---
 
 

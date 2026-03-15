@@ -1,9 +1,10 @@
 ---
 tags: [post]
-layout: bloglayout.html
+template: post
 title: Thoughts for starting a blog
 description: Writing takes a lot of upfront cost. However, once written, you don't have to do much to maintain it, and it becomes discoverable and accessible for future readers for basically forever. You cannot predict who, when and in what context the content is read
 date: 2024-05-04
+author: han4wluc
 ---
 
 Few thoughts on why I started writing a personal blog.
